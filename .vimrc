@@ -90,7 +90,7 @@ set incsearch  " Incrementally highlights as they are typed.
 set ignorecase
 set smartcase
 
-" More natural split opening
+" More natural split opening.
 set splitbelow
 set splitright
 
@@ -105,6 +105,9 @@ set updatetime=750
 au BufEnter,BufWinEnter,WinEnter,FocusGained,InsertEnter * checktime
 au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 
+" Use system clipboard for copying.
+" Requires vim version >= 7.3.74
+set clipboard=unnamed
 
 """""""""""""""""""""""""""""""""""""""""
 " Scrolling Settings
