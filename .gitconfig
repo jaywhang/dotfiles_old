@@ -1,33 +1,32 @@
 [core]
-    editor = vim
-    autocrlf = input
+  editor = vim
+  autocrlf = input
 [merge]
-    tool = vimdiff
-    defaultToUpstream = true
+  tool = meld
+  defaultToUpstream = true
 [color]
-    ui = auto
+  ui = auto
 [credential]
-    helper = cache --timeout=7200
+  helper = cache --timeout=7200
 [http]
-    # Increase the maximum HTTP upload size to 50MB (52428800 Bytes)
-    postBuffer = 52428800
+  # Increase the maximum HTTP upload size to 50MB (52428800 Bytes)
+  postBuffer = 52428800
 [push]
-    default = simple
+  default = simple
 [alias]
-    co = checkout
-    br = branch
-    ci = commit
-    st = status
-    ru = remote update
-    sm = submodule
-    lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lc = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --not --remotes=*
-    df = diff --color-words
-    dif = diff --name-status
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  ru = remote update
+  sm = submodule
+  lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lc = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --not --remotes=*
+  df = diff --color-words
+  dif = diff --name-status
 [user]
-    email = me@jaywhang.com
-    name = Jay Whang
-
-# Load work-specifi configurations
+  email = me@jaywhang.com
+  name = Jay Whang
+# Load work-specific configurations
 [include]
-    path = ~/.at_google.git
+  path = ~/.at_google.git

@@ -109,6 +109,7 @@ au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 " Requires vim version >= 7.3.74
 set clipboard=unnamed
 
+
 """""""""""""""""""""""""""""""""""""""""
 " Scrolling Settings
 """""""""""""""""""""""""""""""""""""""""
