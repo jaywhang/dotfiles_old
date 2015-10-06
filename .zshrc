@@ -31,4 +31,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/aliases.sh
 
 # Load Google-specific zsh configurations.
-source ~/.at_google.zsh
+if [ -f $HOME/.at_google.zsh ]; then
+  source ~/.at_google.zsh
+fi
