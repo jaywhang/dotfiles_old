@@ -1,0 +1,105 @@
+!! urxvt config
+URxvt.termName: rxvt
+
+!URxvt.scrollBar_right:  false
+URxvt.scrollBar:        false
+URxvt.borderLess:       true
+!Urxvt*transparent:	true
+
+!URxvt*inheritPixmap:    true
+!URxvt*tint:             white
+! URxvt.depth: 32
+
+URxvt.geometry:         80x28
+
+!URxvt*font: xft:Dejavu LGC Sans Mono:size=18
+!URxvt*font: xft:terminus-font:size=18, \
+
+! URxvt*font: xft:terminus-font:size=18, \
+!             xft:VL PGothic, \
+! 	    xft:Nanum Gothic
+
+!URxvt*font: xft:terminus:size=14, \
+!URxvt*font: xft:Nanum Gothic:size=14
+
+!	    xft:Droid Sans Fallback
+!            xft:VL Gothic, \
+!            xft:Malgun Gothic
+
+!URxvt.background:   rgba:3f00/3f00/3f00/dddd
+URxvt.background:  rgba:0000/0000/0000/dddd
+!URxvt*background:  rgba:0000/0000/0000/0000
+!URxvt*background:  rgba:2000/2000/2000/cccc
+URxvt.foreground: #B0B0B0
+!URxvt*foreground: red
+
+!! xterm config
+!xterm*termName: xterm
+!xterm*font: xft:terminus-font:size=14
+!xterm*background: !000000
+!xterm*foreground: !A8A8A8
+
+!! folder color
+!URxvt.color4:RoyalBlue
+!URxvt.color12:RoyalBlue
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:1200
+
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: chromium
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@!-]*[\\w/-]
+
+!Xcursor.theme:    whiteglass
+!Xcursor.size:     16
+
+
+
+
+
+! black
+*color0:    #192033
+*color8:    #666666
+
+! red
+*color1:    #A62A3E
+*color9:    #F04758
+
+! green
+*color2:    #38912B
+*color10:   #93C724
+
+! yellow
+*color3:    #B27D12
+*color11:   #DDB62B
+
+! blue
+*color4:    lightblue
+*color12:   royalblue
+
+! magenta
+*color5:  #e32c57
+*color13: #e32c57
+
+! cyan
+*color6:    #4bb5c1
+*color14:   #41A551
+
+! white
+*color7:    #77858C
+*color15:   #C0C0C0
+
+
+!color2: other-writable folder background
+!color3: ncmpcpp time color
+!color11: character device color 
+!color4: other-writable folder font
+!color12: regular folder font
+!color6: ncmpcpp song title color
+!color14: symlink font
+
+
+
+
+
