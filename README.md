@@ -23,15 +23,16 @@
 ### `resources`
 Mainly contains assets for eye candy (window decoration, etc.)
 ### Custom GTK themes (installed to /usr/share/themes)
- * ArchNumix themes
-   * ArchNumixDark: Numix with Arch blue and dark-grey
-   * ArchNumixLight: like ArchNumixDark but with light titlebar
-   * ArchNumixChromium: like ArchNumixDark but adapted to fit the style of chromium
-   * ArchNumixWeb: uses exactly the same colours as the Arch website
-   * ArchNumixWebChromium:  like ArchNumixWeb but adapted to fit the style of chromium
-   * ArchNumixOSXLight: adapted to look like OSX Yosemite (the one used in the screenshots)
-   * ArchNumixOSXDark: like ArchNumixOSXLight but with dark titlebar
-   * ArchNumixWhite: looks a bit like Windows but has dark menus
+#### ArchNumix themes (variant of the [Numix theme](https://numixproject.org/))
+These should be un-tar'd and installed to `/usr/share/themes`
+ * ArchNumixDark: Numix with Arch blue and dark-grey
+ * ArchNumixLight: like ArchNumixDark but with light titlebar
+ * ArchNumixChromium: like ArchNumixDark but adapted to fit the style of chromium
+ * ArchNumixWeb: uses exactly the same colours as the Arch website
+ * ArchNumixWebChromium:  like ArchNumixWeb but adapted to fit the style of chromium
+ * ArchNumixOSXLight: adapted to look like OSX Yosemite (the one used in the screenshots)
+ * ArchNumixOSXDark: like ArchNumixOSXLight but with dark titlebar
+ * ArchNumixWhite: looks a bit like Windows but has dark menus
 
 ### `zsh`
 Custom zsh scripts
