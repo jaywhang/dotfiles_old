@@ -37,5 +37,5 @@ These should be un-tar'd and installed to `/usr/share/themes`
 Custom zsh scripts
 
 ## Things that are not included in this repo
- * `flattr` icons: https://github.com/NitruxSA/flattr-icons
-        flattr-icon-theme
+ * `flattr` icons: https://github.com/NitruxSA/flattr-icons  
+      Installed via `flattr-icon-theme` package
