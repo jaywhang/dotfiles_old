@@ -22,7 +22,6 @@
 ## Folders
 ### `resources`
 Mainly contains assets for eye candy (window decoration, etc.)
-### Custom GTK themes (installed to /usr/share/themes)
 #### ArchNumix themes (variant of the [Numix theme](https://numixproject.org/))
 These should be un-tar'd and installed to `/usr/share/themes`
  * ArchNumixDark: Numix with Arch blue and dark-grey
