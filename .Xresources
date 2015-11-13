@@ -2,18 +2,18 @@
 URxvt.termName: rxvt
 
 !URxvt.scrollBar_right:  false
-URxvt.scrollBar:        false
-URxvt.borderLess:       true
-!Urxvt*transparent:	true
+URxvt.scrollBar: false
+URxvt.borderLess: true
+Urxvt*transparent: true
 
 !URxvt*inheritPixmap:    true
 !URxvt*tint:             white
-! URxvt.depth: 32
+URxvt.depth: 32
 
 URxvt.geometry:         80x28
 
-!URxvt*font: xft:Dejavu LGC Sans Mono:size=18
-!URxvt*font: xft:terminus-font:size=18, \
+!URxvt*font: xft:Dejavu LGC Sans Mono:size=12
+URxvt*font: xft:terminus-font:size=14
 
 ! URxvt*font: xft:terminus-font:size=18, \
 !             xft:VL PGothic, \
@@ -22,7 +22,7 @@ URxvt.geometry:         80x28
 !URxvt*font: xft:terminus:size=14, \
 !URxvt*font: xft:Nanum Gothic:size=14
 
-!	    xft:Droid Sans Fallback
+!URxvt.font: xft:Droid Sans Fallback:size=14
 !            xft:VL Gothic, \
 !            xft:Malgun Gothic
 

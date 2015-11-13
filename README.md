@@ -17,6 +17,15 @@
  * `~/.Xresources`
    * `rxvt-unicode` configurations
    * terminal colors.
+ * IBus: input system for foreign characters
+   * ibus
+   * ibus-anthy: for Japanese
+   * ibus-hangul: for Korean
+ * Fonts installed
+   * Terminus (terminus-font)
+   * Dejavu (ttf-dejavu)
+   * Source Han Sans (adobe-source-han-sans-otc-fonts): set of fonts that covers CJK + more by Adobe
+
 
 
 ## Folders
@@ -38,4 +47,4 @@ Custom zsh scripts
 
 ## Things that are not included in this repo
  * `flattr` icons: https://github.com/NitruxSA/flattr-icons  
-      Installed via `flattr-icon-theme` package
+    Installed via `flattr-icon-theme` package
