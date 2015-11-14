@@ -21,6 +21,7 @@
    * ibus
    * ibus-anthy: for Japanese
    * ibus-hangul: for Korean
+ * Synapse (synapse): application and file launcher
  * Fonts installed
    * Terminus (terminus-font)
    * Dejavu (ttf-dejavu)
