@@ -26,7 +26,11 @@
    * Terminus (terminus-font)
    * Dejavu (ttf-dejavu)
    * Source Han Sans (adobe-source-han-sans-otc-fonts): set of fonts that covers CJK + more by Adobe
-
+ * CUDA-related packages installed
+   * cuda
+   * opencl-nvidia
+   * glu (libGL.so, libGLU.so, libX11.so)
+   * freeglut (for -lglut flag)
 
 
 ## Folders

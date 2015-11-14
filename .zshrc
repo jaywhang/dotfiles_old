@@ -28,6 +28,9 @@ source $ZSH/oh-my-zsh.sh
 # Load aliases.
 source $HOME/.dotfiles/aliases.sh
 
+# CUDA-related exports
+export GLPATH=/usr/lib
+
 # Load Google-specific zsh configurations.
 if [ -f $HOME/.at_google.zsh ]; then
   source ~/.at_google.zsh
