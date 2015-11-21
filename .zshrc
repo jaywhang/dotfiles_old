@@ -26,8 +26,6 @@ fi
 
 # Misc configuration.
 export EDITOR='vim'
-export PATH=$HOME/scripts:$HOME/bin:/usr/local/bin:$PATH
-export PATH=/google/data/ro/teams/youtube-enforcement/classifiers:$PATH
 
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
@@ -35,3 +33,5 @@ source $ZSH/oh-my-zsh.sh
 # Load aliases.
 source $HOME/.dotfiles/aliases.sh
 
+# CUDA-related exports
+export GLPATH=/usr/lib
