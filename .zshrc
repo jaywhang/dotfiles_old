@@ -19,6 +19,11 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh
 # List of oh-my-zsh plugins to load.
 plugins=(git history-substring-search git-flow-completion)
 
+# Load Google-specific zsh configurations.
+if [ -f $HOME/.at_google.zsh ]; then
+  source ~/.at_google.zsh
+fi
+
 # Misc configuration.
 export EDITOR='vim'
 export PATH=$HOME/scripts:$HOME/bin:/usr/local/bin:$PATH
@@ -30,7 +35,3 @@ source $ZSH/oh-my-zsh.sh
 # Load aliases.
 source $HOME/.dotfiles/aliases.sh
 
-# Load Google-specific zsh configurations.
-if [ -f $HOME/.at_google.zsh ]; then
-  source ~/.at_google.zsh
-fi

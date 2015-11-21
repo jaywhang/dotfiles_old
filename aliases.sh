@@ -21,4 +21,5 @@ alias tls='tmux list-sessions'
 alias tns='tmux new -s'
 alias mmmm='Rscript -e "data = as.numeric (readLines (\"stdin\")); summary(data); s = sum(data); sd = sd(data); cat(\"sum: \",s,\"\\n\"); cat(\"stddev: \",sd,\"\\n\");"'
 alias csvawk='awk -F "," -v OFS=","'
+alias wl='wc -l'
 
