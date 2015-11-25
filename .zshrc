@@ -19,6 +19,12 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh
 # List of oh-my-zsh plugins to load.
 plugins=(git history-substring-search git-flow-completion)
 
+# mkdir a directory and cd into it.
+function mkcd {
+  dir="$*";
+  mkdir -p "$dir" && cd "$dir";
+}
+
 # Load Google-specific zsh configurations.
 if [ -f $HOME/.at_google.zsh ]; then
   source ~/.at_google.zsh
