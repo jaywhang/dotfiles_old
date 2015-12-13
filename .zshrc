@@ -29,7 +29,13 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/aliases.sh
 
 # CUDA-related exports
-export GLPATH=/usr/lib
+# For now, use Cuda 7.0 and cuDNN 6.5 for TensorFlow.
+# export GLPATH=/usr/lib
+# export CUDA_HOME=/opt/cuda
+# export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda/lib64"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/bluejay/cuda7.0/lib64"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/bluejay/cuda7.0/cudnn"
+export PATH="$PATH:/home/bluejay/cuda7.0/bin"
 
 # Load Google-specific zsh configurations.
 if [ -f $HOME/.at_google.zsh ]; then

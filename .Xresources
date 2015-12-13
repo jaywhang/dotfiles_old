@@ -1,54 +1,75 @@
-!! urxvt config
+!------------------------------------------------
+! rxvt-unicode settings
+!------------------------------------------------
 URxvt.termName: rxvt
+! Does not work with bspwm (also not needed)
+! URxvt.borderLess: true
 URxvt.scrollBar: false
-URxvt.borderLess: true
-Urxvt*transparent: true
+URxvt*transparent: true
 URxvt.depth: 32
 URxvt.geometry:         80x28
 URxvt*font: xft:terminus-font:size=14
-
 ! Transparency
 URxvt.background:  rgba:0000/0000/0000/dddd
 URxvt.foreground: #B0B0B0
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt.saveLines:1200
+! Url matcher
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: google-chrome-stable
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@!-]*[\\w/-]
 
-! xterm config
+!------------------------------------------------
+! Rofi (launcher, window switcher, etc.) settings
+!------------------------------------------------
+rofi.font: Dejavu Sans Mono 14
+! Place the popup in the center of the screen
+rofi.location: 0
+! Always show 10 lines
+rofi.lines: 10
+rofi.fixed-num-lines: true
+! Because transprency is cool
+rofi.opacity: 85
+! No border, and 10px of inner padding
+rofi.padding: 10
+rofi.bw: 0
+! Default terminal to launch for ssh
+rofi.terminal: urxvt
+! Modes to display
+rofi.modi: run,window
+! Other misc settings
+rofi.ssh-set-title: true
+rofi.disable-history: true
+rofi.hide-scrollbar: true
+! Colors
+rofi.color-enabled: true
+rofi.color-window: #5d5d5d, #002b36, #000000
+rofi.color-normal: #5d5d5d, #ffffff, #696969, #3b3b3b, #ffffff
+rofi.color-active: #4885f5, #ffffff, #85a9e2, #0034ff, #ffffff
+rofi.color-urgent: #e36464, #ffffff, #bb4747, #ff0000, #ffffff
+
+!------------------------------------------------
+! Font settings
+!------------------------------------------------
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+!------------------------------------------------
+! xterm settings
+!------------------------------------------------
 xterm*termName: xterm
-!xterm*font: xft:terminus-font:size=14
 xterm*font: xft:terminus-font:size=14
 xterm*background: !000000
 xterm*foreground: !A8A8A8
 
-! scrollback buffer lines - 65535 is max (64 is default)
-URxvt.saveLines:1200
-
-! Url matcher
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: chromium
-URxvt.matcher.button: 2
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@!-]*[\\w/-]
-
-!Xcursor.theme:    whiteglass
-!Xcursor.size:     16
-
-! *color0:  #2E3436
-! *color1:  #a40000
-! *color2:  #4E9A06
-! *color3:  #C4A000
-! *color4:  #3465A4
-! *color5:  #75507B
-! *color6:  #ce5c00
-! *color7:  #babdb9
-! *color8:  #555753
-! *color9:  #EF2929
-! *color10: #8AE234
-! *color11: #FCE94F
-! *color12: #729FCF
-! *color13: #AD7FA8
-! *color14: #fcaf3e
-! *color15: #EEEEEC
-
-
-# Paradiso theme (https://github.com/chriskempson/base16)
+!------------------------------------------------
+! Terminal colors
+!   Paradiso theme (https://github.com/chriskempson/base16)
+!------------------------------------------------
 URxvt*background:                     #2f1e2e
 URxvt*foreground:                     #a39e9b
 URxvt*cursorColor:                    #a39e9b

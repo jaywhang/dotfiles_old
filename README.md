@@ -7,25 +7,31 @@
 
 ## Arch Linux specific
  * GUI & Eye candy
-   * openbox: window manager
-     * obconf
-     * lxappearance
-     * lxappearance-obconf
+   * ~~openbox: window manager~~
+     * ~~obconf~~
+     * ~~lxappearance~~
+     * ~~lxappearance-obconf~~
+   * bspwm: window manager
+     * bspwm (config: ~/.config/bspwm/bspwmrc)
+     * sxhkd: Simple X HotKey Daemon (config: ~/.config/sxhkd/sxhkdrc)
    * compton-git [aur]: composite manager (config: `~/.config/compton.conf`)
    * tint2: taskbar, systray (config: `~/.config/tint2/tint2rc`)
+   * Themes installed:
+     * ArchNumix\* themes (custom)
+     * AwOken icons 2.5 (aur/awoken-icons): http://alecive.deviantart.com/art/AwOken-163570862
+   * ~~Synapse (synapse): application and file launcher~~
+   * rofi: launcher, window manager, etc. (config: ~/.Xresources)
  * rxvt-unicode (urxvt): terminal
- * `~/.Xresources`
-   * `rxvt-unicode` configurations
-   * terminal colors.
  * IBus: input system for foreign characters
    * ibus
-   * ibus-anthy: for Japanese
    * ibus-hangul: for Korean
- * Synapse (synapse): application and file launcher
+   * ibus-anthy: for Japanese
  * Fonts installed
    * Terminus (terminus-font)
    * Dejavu (ttf-dejavu)
    * Source Han Sans (adobe-source-han-sans-otc-fonts): set of fonts that covers CJK + more by Adobe
+   * Envy Code R (aur/ttf-envy-code-r)
+   * Ubuntu fonts (ttf-ubuntu-font-family)
  * CUDA-related packages installed
    * cuda
    * opencl-nvidia
@@ -51,5 +57,5 @@ These should be un-tar'd and installed to `/usr/share/themes`
 Custom zsh scripts
 
 ## Things that are not included in this repo
- * `flattr` icons: https://github.com/NitruxSA/flattr-icons  
+ * `flattr` icons: https://github.com/NitruxSA/flattr-icons
     Installed via `flattr-icon-theme` package

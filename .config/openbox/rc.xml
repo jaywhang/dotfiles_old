@@ -42,7 +42,7 @@
 				  'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>ArchNumixLight</name>
+    <name>ArchNumixOSXLight</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
 	  available characters are NDSLIMC, each can occur at most once.
@@ -227,26 +227,6 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-    </keybind>
-    <keybind key="W-F2">
-      <action name="GoToDesktop">
-        <to>2</to>
-      </action>
-    </keybind>
-    <keybind key="W-F3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="W-F4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
@@ -274,6 +254,27 @@
           <name>synapse</name>
         </startupnotify>
         <command>synapse</command>
+      </action>
+    </keybind>
+    <!-- Workspace (desktop) control -->
+    <keybind key="F1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="F2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="F3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="F4">
+      <action name="GoToDesktop">
+        <to>4</to>
       </action>
     </keybind>
     <!-- For HHKP2 -->
