@@ -5,10 +5,9 @@ URxvt.termName: rxvt
 ! Does not work with bspwm (also not needed)
 ! URxvt.borderLess: true
 URxvt.scrollBar: false
-URxvt*transparent: true
 URxvt.depth: 32
-URxvt.geometry:         80x28
-URxvt*font: xft:terminus-font:size=14
+URxvt.geometry: 80x28
+URxvt.font: xft:terminus-font:size=14
 ! Transparency
 URxvt.background:  rgba:0000/0000/0000/dddd
 URxvt.foreground: #B0B0B0

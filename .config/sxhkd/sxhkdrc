@@ -40,7 +40,7 @@ super + {j,k}
 	bspc window -f {next,prev}
 # Swap position with prev/next window
 super + shift + {j,k}
-    bspc window -s {next,prev}  
+    bspc window -s {next,prev}
 # Move to left/right window
 super + {h,l}
 	bspc window -f {left,right}
@@ -63,6 +63,8 @@ super + {_,ctrl+ }{1-5}
 # Move to prev/next desktop
 super + {comma,period}
     bspc desktop -f {prev,next}
+super + shift + {comma,period}
+    bspc window -d {prev,next}
 # Preselet the splitting area of the current window
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
@@ -85,9 +87,11 @@ super + @button{1-3}
 
 super + Return
 	urxvt
+super + Escape
+    urxvt -name urxvt_floating 
 {super,alt} + space
-    rofi -show run	
+    rofi -show run
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + shift + Escape
 	pkill -USR1 -x sxhkd
