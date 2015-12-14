@@ -32,16 +32,18 @@
    * Source Han Sans (adobe-source-han-sans-otc-fonts): set of fonts that covers CJK + more by Adobe
    * Envy Code R (aur/ttf-envy-code-r)
    * Ubuntu fonts (ttf-ubuntu-font-family)
+   * Roboto (aur/ttf-roboto)
+   * Naver Nanum fonts (aur/ttf-nanum)
+   * Nanum Gothic Coding font (aur/ttf-nanumgothic_coding)
  * CUDA-related packages installed
    * cuda
    * opencl-nvidia
    * glu (libGL.so, libGLU.so, libX11.so)
    * freeglut (for -lglut flag)
 
-
 ## Folders
 ### `resources`
-Mainly contains assets for eye candy (window decoration, etc.)
+Mainly contains assets for GUI / eye candy (window decoration, etc.)
 #### ArchNumix themes (variant of the [Numix theme](https://numixproject.org/))
 These should be un-tar'd and installed to `/usr/share/themes`
  * ArchNumixDark: Numix with Arch blue and dark-grey

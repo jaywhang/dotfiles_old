@@ -7,7 +7,8 @@ URxvt.termName: rxvt
 URxvt.scrollBar: false
 URxvt.depth: 32
 URxvt.geometry: 80x28
-URxvt.font: xft:terminus-font:size=14
+URxvt.font: xft:terminus-font:size=14, \
+            xft:NanumGothicCoding:size=14
 ! Transparency
 URxvt.background:  rgba:0000/0000/0000/dddd
 URxvt.foreground: #B0B0B0

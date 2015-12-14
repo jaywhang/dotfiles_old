@@ -64,12 +64,12 @@ super + {comma,period}
     bspc desktop -f {prev,next}
 super + shift + {comma,period}
     bspc window -d {prev,next}
-# Preselet the splitting area of the current window
+# Preselect the splitting area of the current window
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 # Resize the window in given direction
 super + alt + {h,j,k,l}
-	bspc window -e {left -10,down +10,up -10,right +10}
+	bspc window -e {left -30,down +30,up -30,right +30}
 # Mouse events
 ~button1
 	bspc pointer -g focus
