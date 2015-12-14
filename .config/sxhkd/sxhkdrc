@@ -56,10 +56,9 @@ F{1-5}
 # Move the selected window to target desktop
 ctrl + F{1-5}
     bspc window -d ^{1-5}
-# Either move to the target desktop, or move
-# the current window to it.
-super + {_,ctrl+ }{1-5}
-	bspc {desktop -f,window -d} ^{1-9,10}
+# Move the current window to the target desktop
+super + ctrl + {1-5}
+	bspc window -d ^{1-5}
 # Move to prev/next desktop
 super + {comma,period}
     bspc desktop -f {prev,next}
@@ -87,8 +86,12 @@ super + @button{1-3}
 
 super + Return
 	urxvt
+# Open a floating terminal
 super + Escape
-    urxvt -name urxvt_floating 
+    urxvt -name urxvt_floating
+# Start chrome in incognito mode
+super + 1
+    google-chrome-stable --incognito
 {super,alt} + space
     rofi -show run
 
