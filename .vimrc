@@ -21,6 +21,7 @@ Plugin 'tComment'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
+Plugin 'lervag/vimtex'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -107,7 +108,7 @@ au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 
 " Use system clipboard for copying.
 " Requires vim version >= 7.3.74
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -178,9 +179,9 @@ match OverLength /\%>80v.\+/
 set autoindent
 set expandtab
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Show matching braces.
 set sm
@@ -190,6 +191,36 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Display error for trailing whitespace
 match ErrorMsg '\s\+$'
+
+
+"""""""""""""""""""""""""""""""""""""""""
+" LaTeX Settings
+"""""""""""""""""""""""""""""""""""""""""
+" Better filetype matching.
+let g:tex_flavor = 'latex'
+
+" Autocomplete support with YouCompleteMe.
+if !exists('g:ycm_semantic_triggers')
+	let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = [
+			\ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*,?)*',
+			\ 're!\\includegraphics([^]]*])?{[^}]*',
+			\ 're!\\(include|input){[^}]*'
+			\ ]
+
+""" vimtex configurations
+let g:vimtex_fold_enabled = 1
+let g:vimtex_indent_enabled = 1
+
+" Set default PDF viewer
+let g:vimtex_view_general_viewer = 'evince'
+
+" Auto save for tex files
+autocmd CursorHold,CursorHoldI *.tex update
+
+" Clean up auxiliary files upon exiting
+" autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C
 
 
 """""""""""""""""""""""""""""""""""""""""

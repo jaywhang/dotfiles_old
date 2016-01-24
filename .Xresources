@@ -8,9 +8,9 @@ URxvt.scrollBar: false
 URxvt.depth: 32
 URxvt.geometry: 80x28
 URxvt.font: xft:terminus-font:size=14, \
-            xft:NanumGothicCoding:size=14
+            xft:NanumGothicCoding
 ! Transparency
-URxvt.background:  rgba:0000/0000/0000/dddd
+URxvt.background:  rgba:0000/0000/0000/eeee
 URxvt.foreground: #B0B0B0
 ! scrollback buffer lines - 65535 is max (64 is default)
 URxvt.saveLines:1200
@@ -70,35 +70,46 @@ xterm*foreground: !A8A8A8
 ! Terminal colors
 !   Paradiso theme (https://github.com/chriskempson/base16)
 !------------------------------------------------
-URxvt*background:                     #2f1e2e
-URxvt*foreground:                     #a39e9b
-URxvt*cursorColor:                    #a39e9b
-URxvt*scrollColor:                    #a39e9b
-URxvt*highlightColor:                 #4f424c
-URxvt*highlightTextColor:             #8d8687
-
-URxvt*color0:                         #2f1e2e
-URxvt*color1:                         #ef6155
-URxvt*color2:                         #48b685
-URxvt*color3:                         #fec418
-URxvt*color4:                         #06b6ef
-URxvt*color5:                         #815ba4
-URxvt*color6:                         #5bc4bf
-URxvt*color7:                         #a39e9b
-URxvt*color8:                         #776e71
-URxvt*color9:                         #ef6155
-URxvt*color10:                        #48b685
-URxvt*color11:                        #fec418
-URxvt*color12:                        #06b6ef
-URxvt*color13:                        #815ba4
-URxvt*color14:                        #5bc4bf
-URxvt*color15:                        #e7e9db
-
-! 256 color space
-URxvt*color16:                        #f99b15
-URxvt*color17:                        #e96ba8
-URxvt*color18:                        #41323f
-URxvt*color19:                        #4f424c
-URxvt*color20:                        #8d8687
-URxvt*color21:                        #b9b6b0
-
+#define base00 #2f1e2e
+#define base01 #41323f
+#define base02 #4f424c
+#define base03 #776e71
+#define base04 #8d8687
+#define base05 #a39e9b
+#define base06 #b9b6b0
+#define base07 #e7e9db
+#define base08 #ef6155
+#define base09 #f99b15
+#define base0A #fec418
+#define base0B #48b685
+#define base0C #5bc4bf
+#define base0D #06b6ef
+#define base0E #815ba4
+#define base0F #e96ba8
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06

@@ -13,6 +13,6 @@ bspc config focus_follows_pointer true
 
 bspc monitor -d I II III IV V
 
-bspc rule -a tint2 floating=on manage=off
+bspc rule -a tint2 floating=on
 bspc rule -a urxvt_floating floating=on
 

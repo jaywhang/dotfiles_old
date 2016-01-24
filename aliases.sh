@@ -23,3 +23,4 @@ alias mmmm='Rscript -e "data = as.numeric (readLines (\"stdin\")); summary(data)
 alias csvawk='awk -F "," -v OFS=","'
 alias wl='wc -l'
 
+alias tf='source ~/tensorflow/bin/activate'

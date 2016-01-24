@@ -24,10 +24,10 @@ super + t
 	bspc desktop -l next
 # "Balance" the split ratios of the tree of the selected desktop,
 # so all siblings occupy the same area.
-super + b
+super + e
 	bspc desktop -B
 # Reset the split ratios of the tree of the selected desktop
-super + e
+super + b
     bspc desktop -E
 # Toggle float
 super + f
