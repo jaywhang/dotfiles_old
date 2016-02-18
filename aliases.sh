@@ -4,7 +4,6 @@ alias vdir='vdir --color=always'
 alias grep='grep --color=always'
 alias fgrep='fgrep --color=always'
 alias egrep='egrep --color=always'
-alias ls='ls -x -G'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -xF'
@@ -26,5 +25,11 @@ alias ipy='ipython'
 
 # Turn off monitor (until mouse movement or keyboard input)
 alias off='xset dpms force off'
-
 alias tf='source ~/tensorflow/bin/activate'
+
+if [[ `uname` == 'Darwin' ]]
+then
+  alias ls='ls -x -G'
+else
+  alias ls='ls -x --color=always'
+fi
