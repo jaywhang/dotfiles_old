@@ -22,6 +22,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lervag/vimtex'
+Plugin 'junegunn/seoul256.vim'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -108,7 +109,7 @@ au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 
 " Use system clipboard for copying.
 " Requires vim version >= 7.3.74
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -160,7 +161,7 @@ let g:molokai_original=1
 set background=dark
 
 " Default colorscheme.
-colorscheme seoul256
+colorscheme darkocean 
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -206,7 +207,8 @@ endif
 let g:ycm_semantic_triggers.tex = [
 			\ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*,?)*',
 			\ 're!\\includegraphics([^]]*])?{[^}]*',
-			\ 're!\\(include|input){[^}]*'
+			\ 're!\\(include|input){[^}]*',
+      \ '{',
 			\ ]
 
 """ vimtex configurations
@@ -214,10 +216,13 @@ let g:vimtex_fold_enabled = 1
 let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
-let g:vimtex_view_general_viewer = 'evince'
+"let g:vimtex_view_general_viewer = 'evince'
+let g:livepreview_previewer = 'open -a Preview'
 
 " Auto save for tex files
 autocmd CursorHold,CursorHoldI *.tex update
+
+let g:vimtex_latexmk_options = '-shell-escape -synctex=1'
 
 " Clean up auxiliary files upon exiting
 " autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C

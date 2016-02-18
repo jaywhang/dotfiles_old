@@ -27,7 +27,7 @@ function mkcd {
 
 # Load Google-specific zsh configurations.
 if [ -f $HOME/.at_google.zsh ]; then
-  source ~/.at_google.zsh
+  source $HOME/.at_google.zsh
 fi
 
 # Misc configuration.
@@ -38,6 +38,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Load aliases.
 source $HOME/.dotfiles/aliases.sh
+
+# Load machine-specific aliases.
+if [ -f $HOME/.aliases.sh ]; then
+  source $HOME/.aliases.sh
+fi
 
 # CUDA-related exports
 # For now, use Cuda 7.0 and cuDNN 6.5 for TensorFlow.
