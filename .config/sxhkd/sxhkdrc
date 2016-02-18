@@ -1,10 +1,10 @@
 # Volume control
 XF86AudioLowerVolume
-    /home/bluejay/.scripts/vol.sh 3-
+  /home/bluejay/.scripts/vol.sh 3-
 XF86AudioRaiseVolume
-    /home/bluejay/.scripts/vol.sh 3+
+  /home/bluejay/.scripts/vol.sh 3+
 XF86AudioMute
-    amixer sset Master toggle
+  amixer sset Master toggle
 
 # Lock screen
 # TODO
@@ -28,19 +28,19 @@ super + e
 	bspc desktop -B
 # Reset the split ratios of the tree of the selected desktop
 super + b
-    bspc desktop -E
+  bspc desktop -E
 # Toggle float
 super + f
 	bspc window -t floating
 # Toggle maximize
 super + m
-    bspc window -t fullscreen
+  bspc window -t fullscreen
 # Move to prev/next window
 super + {j,k}
 	bspc window -f {next,prev}
 # Swap position with prev/next window
 super + shift + {j,k}
-    bspc window -s {next,prev}
+  bspc window -s {next,prev}
 # Move to left/right window
 super + {h,l}
 	bspc window -f {left,right}
@@ -49,27 +49,30 @@ super + shift + {h,l}
 	bspc window -s {left,right}
 # Rotate the arrangement of windows
 super + Tab
-    bspc desktop --rotate 90
+  bspc desktop --rotate 90
 # Choose desktop 1-5
 F{1-5}
-    bspc desktop -f ^{1-5}
+  bspc desktop -f ^{1-5}
 # Move the selected window to target desktop
 ctrl + F{1-5}
-    bspc window -d ^{1-5}
+  bspc window -d ^{1-5}
 # Move the current window to the target desktop
-super + ctrl + {1-5}
+super + shift + {1-5}
 	bspc window -d ^{1-5}
 # Move to prev/next desktop
 super + {comma,period}
-    bspc desktop -f {prev,next}
-super + shift + {comma,period}
-    bspc window -d {prev,next}
+  bspc desktop -f {prev,next}
+# Move, with the current window, to prev/next desktop
+super + shift + comma
+  bspc window -d prev && bspc desktop -f prev
+super + shift + period
+  bspc window -d next && bspc desktop -f next
 # Preselect the splitting area of the current window
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 # Resize the window in given direction
 super + alt + {h,j,k,l}
-	bspc window -e {left -30,down +30,up -30,right +30}
+	bspc window -e {left -50,down +50,up -50,right +50}
 # Mouse events
 ~button1
 	bspc pointer -g focus
@@ -88,13 +91,17 @@ super + Return
 	urxvt
 # Open a floating terminal
 super + Escape
-    urxvt -name urxvt_floating
+  urxvt -name urxvt_floating
 # Start chrome in incognito mode
 super + 1
-    google-chrome-stable --incognito
+  google-chrome-stable --incognito
 {super,alt} + space
-    rofi -show run
+  rofi -show run
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
 	pkill -USR1 -x sxhkd
+
+# Kill X server
+ctrl + alt + BackSpace
+  pkill bspwm

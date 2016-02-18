@@ -106,9 +106,11 @@ set updatetime=750
 au BufEnter,BufWinEnter,WinEnter,FocusGained,InsertEnter * checktime
 au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 
-" Use system clipboard for copying.
-" Requires vim version >= 7.3.74
-set clipboard=unnamedplus
+" Use system clipboard for copying.  Requires vim version >= 7.3.74
+" For some reason, doesn't work on OS X.
+if !has('mac')
+  set clipboard=unnamedplus
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -154,13 +156,12 @@ set mousehide
 " Enable 256 colors
 set t_Co=256
 let g:solarized_termcolors=256
-let g:molokai_original=1
 
 " Use dark terminal background.
 set background=dark
 
 " Default colorscheme.
-colorscheme seoul256
+colorscheme darkocean
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -206,7 +207,8 @@ endif
 let g:ycm_semantic_triggers.tex = [
 			\ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*,?)*',
 			\ 're!\\includegraphics([^]]*])?{[^}]*',
-			\ 're!\\(include|input){[^}]*'
+			\ 're!\\(include|input){[^}]*',
+      \ '{'
 			\ ]
 
 """ vimtex configurations
@@ -214,10 +216,18 @@ let g:vimtex_fold_enabled = 1
 let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
-let g:vimtex_view_general_viewer = 'evince'
+if has('mac')
+  let g:vimtex_view_general_viewer = 'Preview'
+elseif has('unix')
+  let g:vimtex_view_general_viewer = 'evince'
+endif
+
 
 " Auto save for tex files
 autocmd CursorHold,CursorHoldI *.tex update
+
+" Copmile options for LaTeX
+let g:vimtex_latexmk_options = '-pdf -shell-escape'
 
 " Clean up auxiliary files upon exiting
 " autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C

@@ -1,4 +1,15 @@
 !------------------------------------------------
+! DPI settings
+!------------------------------------------------
+Xft.dpi:            180
+Xft.autohint:       0
+Xft.lcdfilter:      lcddefault
+Xft.hintstyle:      hintfull
+Xft.hinting:        1
+Xft.antialias:      1
+Xft.rgba:           bgr
+
+!------------------------------------------------
 ! rxvt-unicode settings
 !------------------------------------------------
 URxvt.termName: rxvt
@@ -7,7 +18,7 @@ URxvt.termName: rxvt
 URxvt.scrollBar: false
 URxvt.depth: 32
 URxvt.geometry: 80x28
-URxvt.font: xft:terminus-font:size=14, \
+URxvt.font: xft:Monaco:size=10, \
             xft:NanumGothicCoding
 ! Transparency
 URxvt.background:  rgba:0000/0000/0000/eeee
@@ -50,15 +61,6 @@ rofi.color-active: #4885f5, #ffffff, #85a9e2, #0034ff, #ffffff
 rofi.color-urgent: #e36464, #ffffff, #bb4747, #ff0000, #ffffff
 
 !------------------------------------------------
-! Font settings
-!------------------------------------------------
-Xft.antialias: 1
-Xft.hinting: 1
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-Xft.rgba: rgb
-
-!------------------------------------------------
 ! xterm settings
 !------------------------------------------------
 xterm*termName: xterm
@@ -68,48 +70,53 @@ xterm*foreground: !A8A8A8
 
 !------------------------------------------------
 ! Terminal colors
-!   Paradiso theme (https://github.com/chriskempson/base16)
 !------------------------------------------------
-#define base00 #2f1e2e
-#define base01 #41323f
-#define base02 #4f424c
-#define base03 #776e71
-#define base04 #8d8687
-#define base05 #a39e9b
-#define base06 #b9b6b0
-#define base07 #e7e9db
-#define base08 #ef6155
-#define base09 #f99b15
-#define base0A #fec418
-#define base0B #48b685
-#define base0C #5bc4bf
-#define base0D #06b6ef
-#define base0E #815ba4
-#define base0F #e96ba8
-*foreground:   base05
-*background:   base00
-*cursorColor:  base05
-*color0:       base00
-*color1:       base08
-*color2:       base0B
-*color3:       base0A
-*color4:       base0D
-*color5:       base0E
-*color6:       base0C
-*color7:       base05
-*color8:       base03
-*color9:       base08
-*color10:      base0B
-*color11:      base0A
-*color12:      base0D
-*color13:      base0E
-*color14:      base0C
-*color15:      base07
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*color16:      base09
-*color17:      base0F
-*color18:      base01
-*color19:      base02
-*color20:      base04
-*color21:      base06
+! Solarized Darcula theme
+! (from https://github.com/mbadolato/iTerm2-Color-Schemes)
+!
+#define Ansi_0_Color #25292a
+#define Ansi_1_Color #f24840
+#define Ansi_10_Color #629655
+#define Ansi_11_Color #b68800
+#define Ansi_12_Color #2075c7
+#define Ansi_13_Color #797fd4
+#define Ansi_14_Color #15968d
+#define Ansi_15_Color #d2d8d9
+#define Ansi_2_Color #629655
+#define Ansi_3_Color #b68800
+#define Ansi_4_Color #2075c7
+#define Ansi_5_Color #797fd4
+#define Ansi_6_Color #15968d
+#define Ansi_7_Color #d2d8d9
+#define Ansi_8_Color #25292a
+#define Ansi_9_Color #f24840
+#define Background_Color #3d3f41
+#define Bold_Color #ececec
+#define Cursor_Color #708284
+#define Cursor_Text_Color #002831
+#define Foreground_Color #d2d8d9
+#define Selected_Text_Color #d2d8d9
+#define Selection_Color #214283
+
+URxvt*color0:       Ansi_0_Color
+URxvt*color1:       Ansi_1_Color
+URxvt*color2:       Ansi_2_Color
+URxvt*color3:       Ansi_3_Color
+URxvt*color4:       Ansi_4_Color
+URxvt*color5:       Ansi_5_Color
+URxvt*color6:       Ansi_6_Color
+URxvt*color7:       Ansi_7_Color
+URxvt*color8:       Ansi_8_Color
+URxvt*color9:       Ansi_9_Color
+URxvt*color10:      Ansi_10_Color
+URxvt*color11:      Ansi_11_Color
+URxvt*color12:      Ansi_12_Color
+URxvt*color13:      Ansi_13_Color
+URxvt*color14:      Ansi_14_Color
+URxvt*color15:      Ansi_15_Color
+URxvt*colorBD:      Bold_Color
+URxvt*colorIT:      Italic_Color
+URxvt*colorUL:      Underline_Color
+URxvt*foreground:   Foreground_Color
+URxvt*background:   Background_Color
+URxvt*cursorColor:  Cursor_Color

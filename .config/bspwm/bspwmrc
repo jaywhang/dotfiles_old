@@ -3,7 +3,6 @@
 bspc config normal_border_color   dimgray
 bspc config focused_border_color  dodgerblue
 bspc config border_width          5
-bspc config bottom_padding        30  # Same as tint2 height
 bspc config window_gap            10
 bspc config split_ratio           0.618 # Golden ratio!
 bspc config borderless_monocle    true
@@ -13,6 +12,5 @@ bspc config focus_follows_pointer true
 
 bspc monitor -d I II III IV V
 
-bspc rule -a tint2 floating=on
 bspc rule -a urxvt_floating floating=on
 

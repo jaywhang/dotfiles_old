@@ -23,4 +23,7 @@ alias mmmm='Rscript -e "data = as.numeric (readLines (\"stdin\")); summary(data)
 alias csvawk='awk -F "," -v OFS=","'
 alias wl='wc -l'
 
+# Turn off monitor (until mouse movement or keyboard input)
+alias off='xset dpms force off'
+
 alias tf='source ~/tensorflow/bin/activate'
