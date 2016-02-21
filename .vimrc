@@ -218,10 +218,8 @@ let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
 if has('mac')
-  let g:vimtex_view_general_viewer = 'open -a Preview'
   let g:livepreview_previewer = 'open -a Preview'
 elseif has('unix')
-  let g:vimtex_view_general_viewer = 'evince'
   let g:livepreview_previewer = 'evince'
 endif
 
