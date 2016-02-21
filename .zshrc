@@ -40,4 +40,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/aliases.sh
 
 # Load machine-specific settings
-source $HOME/.$HOST"_config.sh"
+if [ -f $HOME/.$HOST"_config.sh" ]; then
+  source $HOME/.$HOST"_config.sh"
+fi
