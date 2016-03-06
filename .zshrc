@@ -27,7 +27,7 @@ function mkcd {
 
 # Load Google-specific zsh configurations.
 if [ -f $HOME/.at_google.zsh ]; then
-  source ~/.at_google.zsh
+  source $HOME/.at_google.zsh
 fi
 
 # Misc configuration.
@@ -40,4 +40,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/aliases.sh
 
 # Load machine-specific settings
-source $HOME/.$HOST"_config.sh"
+if [ -f $HOME/.$HOST"_config.sh" ]; then
+  source $HOME/.$HOST"_config.sh"
+fi

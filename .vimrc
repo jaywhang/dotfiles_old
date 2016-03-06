@@ -22,6 +22,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lervag/vimtex'
+Plugin 'junegunn/seoul256.vim'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -217,17 +218,16 @@ let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
 if has('mac')
-  let g:vimtex_view_general_viewer = 'Preview'
+  let g:livepreview_previewer = 'open -a Preview'
 elseif has('unix')
-  let g:vimtex_view_general_viewer = 'evince'
+  let g:livepreview_previewer = 'evince'
 endif
-
 
 " Auto save for tex files
 autocmd CursorHold,CursorHoldI *.tex update
 
-" Copmile options for LaTeX
-let g:vimtex_latexmk_options = '-pdf -shell-escape'
+" Compile options for LaTeX
+let g:vimtex_latexmk_options = '-pdf -shell-escape -synctex=1'
 
 " Clean up auxiliary files upon exiting
 " autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C
