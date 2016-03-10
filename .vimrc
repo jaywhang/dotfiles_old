@@ -187,6 +187,9 @@ set expandtab   " Use spaces instead of real tabs
 set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Show matching braces.
 set sm
@@ -221,9 +224,10 @@ let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
 if has('mac')
+  " TODO: needs to be updated
   let g:livepreview_previewer = 'open -a Preview'
 elseif has('unix')
-  let g:livepreview_previewer = 'evince'
+  let g:vimtex_view_method = 'mupdf'
 endif
 
 " Auto save for tex files
