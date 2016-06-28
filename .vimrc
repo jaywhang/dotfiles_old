@@ -163,8 +163,12 @@ let g:solarized_termcolors=256
 " Use dark terminal background.
 set background=dark
 
-" Default colorscheme.
-colorscheme seoul256
+" Default colorschemes.
+if has('mac')
+  colorscheme seoul256
+elseif has('unix')
+  colorscheme darkocean
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -179,13 +183,15 @@ set colorcolumn=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%>80v.\+/
 
-" Indentation (soft tabs, each with 4 spaces).
-set autoindent
-set expandtab
-set smartindent
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+" Indentation (soft tabs, each with 2 spaces).
+set noexpandtab " Make sure that every file uses real tabs, not spaces
+set expandtab   " Use spaces instead of real tabs
+set shiftround  " Round indent to multiple of 'shiftwidth'
+set smartindent " Do smart indenting when starting a new line
+set autoindent  " Copy indent from current line, over to the new line
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Show matching braces.
 set sm
@@ -220,11 +226,10 @@ let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
 if has('mac')
-  let g:vimtex_view_general_viewer = 'open -a Preview'
+  " TODO: needs to be updated
   let g:livepreview_previewer = 'open -a Preview'
 elseif has('unix')
-  let g:vimtex_view_general_viewer = 'evince'
-  let g:livepreview_previewer = 'evince'
+  let g:vimtex_view_method = 'mupdf'
 endif
 
 " Auto save for tex files
@@ -405,6 +410,7 @@ sunmap ge
 """""""""""""""""""""""""""""""""""""""""
 " ....Are we done?
 """""""""""""""""""""""""""""""""""""""""
+
 " Turn filetype back on.
 filetype plugin indent on
 syntax on
