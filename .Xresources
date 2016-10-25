@@ -24,7 +24,7 @@ URxvt.font: xft:Monaco:size=10, \
 URxvt.background:  rgba:0000/0000/0000/eeee
 URxvt.foreground: #B0B0B0
 ! scrollback buffer lines - 65535 is max (64 is default)
-URxvt.saveLines:1200
+URxvt.saveLines: 50000
 ! Url matcher
 URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: google-chrome-stable

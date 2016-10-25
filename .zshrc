@@ -32,12 +32,16 @@ fi
 
 # Misc configuration.
 export EDITOR='vim'
+export VISUAL='vim'
 
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
 # Load aliases.
 source $HOME/.dotfiles/aliases.sh
+
+# Load custom scripts
+export PATH=$HOME/.dotfiles/scripts:$PATH
 
 # Load machine-specific settings
 if [ -f $HOME/.$HOST"_config.sh" ]; then

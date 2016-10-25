@@ -22,10 +22,9 @@ alias mmmm='Rscript -e "data = as.numeric (readLines (\"stdin\")); summary(data)
 alias csvawk='awk -F "," -v OFS=","'
 alias wl='wc -l'
 alias ipy='ipython'
-
-# Turn off monitor (until mouse movement or keyboard input)
-alias off='xset dpms force off'
-alias tf='source ~/tensorflow/bin/activate'
+alias nb='jupyter notebook'
+alias pyserv='python -m http.server 8080'
+alias oc='octave-cli'
 
 if [[ `uname` == 'Darwin' ]]
 then
@@ -33,3 +32,9 @@ then
 else
   alias ls='ls -x --color=always'
 fi
+
+
+# Stanford servers
+alias corn='ssh -l jaywhang corn.stanford.edu'
+alias rye01='ssh -l jaywhang rye01.stanford.edu'
+alias rye02='ssh -l jaywhang rye02.stanford.edu'

@@ -15,7 +15,8 @@
      * bspwm (config: ~/.config/bspwm/bspwmrc)
      * sxhkd: Simple X HotKey Daemon (config: ~/.config/sxhkd/sxhkdrc)
    * compton-git [aur]: composite manager (config: `~/.config/compton.conf`)
-   * tint2: taskbar, systray (config: `~/.config/tint2/tint2rc`)
+   * ~~tint2: taskbar, systray (config: `~/.config/tint2/tint2rc`)~~
+   * stalonetray: systray
    * Themes installed:
      * ArchNumix\* themes (custom)
      * AwOken icons 2.5 (aur/awoken-icons): http://alecive.deviantart.com/art/AwOken-163570862
@@ -35,6 +36,7 @@
    * Roboto (aur/ttf-roboto)
    * Naver Nanum fonts (aur/ttf-nanum)
    * Nanum Gothic Coding font (aur/ttf-nanumgothic_coding)
+   * Monaco (aur/ttf-monaco)
  * CUDA-related packages installed
    * cuda
    * opencl-nvidia

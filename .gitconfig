@@ -22,8 +22,7 @@
   sm = submodule
   lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lc = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --not --remotes=*
-  df = diff --name-only
-  dfs = diff --name-status
+  df = diff --name-status
 [user]
   email = me@jaywhang.com
   name = Jay Whang

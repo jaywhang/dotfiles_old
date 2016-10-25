@@ -23,6 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-fugitive'
 Plugin 'lervag/vimtex'
 Plugin 'junegunn/seoul256.vim'
+Plugin 'google/vim-searchindex'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -110,7 +111,7 @@ au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 " Use system clipboard for copying.  Requires vim version >= 7.3.74
 " For some reason, doesn't work on OS X.
 if !has('mac')
-  set clipboard=unnamedplus
+  set clipboard^=unnamedplus
 endif
 
 
@@ -220,6 +221,8 @@ let g:ycm_semantic_triggers.tex = [
 
 """ vimtex configurations
 let g:vimtex_fold_enabled = 1
+" Without this, folding is really slow.
+let g:vimtex_fold_manual = 1
 let g:vimtex_indent_enabled = 1
 
 " Set default PDF viewer
@@ -227,7 +230,9 @@ if has('mac')
   " TODO: needs to be updated
   let g:livepreview_previewer = 'open -a Preview'
 elseif has('unix')
-  let g:vimtex_view_method = 'mupdf'
+  " let g:vimtex_view_method = 'mupdf'
+  let g:vimtex_view_method = 'general'
+  let g:vimtex_view_general_viewer = 'evince'
 endif
 
 " Auto save for tex files
@@ -348,6 +353,9 @@ let g:ctrlp_match_window = 'results:100'
 """""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """""""""""""""""""""""""""""""""""""""""
+" Because we built YCM for Python 3
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
+
 " Comments and strings are fair game for autocompletion.
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_comments_and_strings = 1
