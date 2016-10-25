@@ -24,6 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'lervag/vimtex'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'google/vim-searchindex'
+Plugin 'bkad/CamelCaseMotion'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -267,7 +268,7 @@ set statusline+=\ \ \ \ %p%%  " Percent through file
 
 
 """""""""""""""""""""""""""""""""""""""""
-" Custom Key Mappings 
+" Custom Key Mappings
 """""""""""""""""""""""""""""""""""""""""
 " Tab control
 nnoremap th  :tabprev<CR>
@@ -306,6 +307,9 @@ nmap ,, <c-_><c-_>
 
 " Toggle between paste mode and normal mode with <F9>.
 set pastetoggle=<F9>
+
+" Search for visually selected text.
+vnoremap // y/<C-R>"<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -397,6 +401,18 @@ let g:gitgutter_max_signs = 1500
 let g:gitgutter_sign_removed_first_line = '^^'
 let g:gitgutter_sign_modified_removed = 'ww'
 
+"""""""""""""""""""""""""""""""""""""""""
+" CamelCaseMotion Settings
+"""""""""""""""""""""""""""""""""""""""""
+" call camelcasemotion#CreateMotionMappings('<leader>')
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
 
 """""""""""""""""""""""""""""""""""""""""
 " ....Are we done?

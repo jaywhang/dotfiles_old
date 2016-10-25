@@ -20,9 +20,12 @@
   st = status
   ru = remote update
   sm = submodule
+  df = diff --name-status
   lg = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lc = log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --not --remotes=*
-  df = diff --name-status
+  l = log --pretty=format:'%C(yellow)%h%C(white) %an <%ae> %>|(80)%ai%Creset%n%C(bold)%w(0,4,4)%s%C(reset)%n%+b'
+  ll = log --stat
+  lp = log -p
 [user]
   email = me@jaywhang.com
   name = Jay Whang
