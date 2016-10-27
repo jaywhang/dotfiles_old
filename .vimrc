@@ -357,9 +357,6 @@ let g:ctrlp_match_window = 'results:100'
 """""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """""""""""""""""""""""""""""""""""""""""
-" Because we built YCM for Python 3
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
-
 " Comments and strings are fair game for autocompletion.
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_comments_and_strings = 1
@@ -378,6 +375,7 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_show_diagnostics_ui = 0
 
 " Log more verbosely.
+let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
 
