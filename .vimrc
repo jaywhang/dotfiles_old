@@ -7,6 +7,9 @@ set nocompatible
 " once we're ready to start editing.
 filetype off
 
+" Extract hostname for machine-dependent config.
+let hostname = substitute(system('hostname'), '\n', '', '')
+
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
@@ -34,9 +37,13 @@ else
   " Non-Google only
   Plugin 'google/maktaba'
   Plugin 'google/glaive'
-  Plugin 'Valloric/YouCompleteMe'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'scrooloose/syntastic'
+
+  " Exclude Raspberry Pi (Rothko).
+  if hostname != 'rothko'
+    Plugin 'Valloric/YouCompleteMe'
+  endif
 endif
 
 
