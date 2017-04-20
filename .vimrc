@@ -388,6 +388,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_python_checkers = ['python']
+" if hostname() == 'warhol'
+"   let g:syntastic_python_checkers = ['pylint']
+"   let g:syntastic_pylint_exec = '~/.conda3/bin/pylint'
+" endif
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -405,14 +410,14 @@ let g:gitgutter_sign_modified_removed = 'ww'
 " CamelCaseMotion Settings
 """""""""""""""""""""""""""""""""""""""""
 " call camelcasemotion#CreateMotionMappings('<leader>')
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-map <silent> ge <Plug>CamelCaseMotion_ge
-sunmap w
-sunmap b
-sunmap e
-sunmap ge
+" map <silent> w <Plug>CamelCaseMotion_w
+" map <silent> b <Plug>CamelCaseMotion_b
+" map <silent> e <Plug>CamelCaseMotion_e
+" map <silent> ge <Plug>CamelCaseMotion_ge
+" sunmap w
+" sunmap b
+" sunmap e
+" sunmap ge
 
 """""""""""""""""""""""""""""""""""""""""
 " ....Are we done?

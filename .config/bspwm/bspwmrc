@@ -12,5 +12,7 @@ bspc config focus_follows_pointer true
 
 bspc monitor -d I II III IV V
 
-bspc rule -a urxvt_floating floating=on
+bspc rule -a urxvt_floating state=floating
 
+# Leave space for stalonetray.
+bspc config bottom_padding 64

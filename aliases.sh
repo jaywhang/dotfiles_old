@@ -33,8 +33,12 @@ else
   alias ls='ls -x --color=always'
 fi
 
-
 # Stanford servers
 alias corn='ssh -l jaywhang corn.stanford.edu'
 alias rye01='ssh -l jaywhang rye01.stanford.edu'
 alias rye02='ssh -l jaywhang rye02.stanford.edu'
+
+# Anaconda environment management.
+alias pyenv='conda create -n '
+alias pyon='source activate '
+alias pyoff='source deactivate'
