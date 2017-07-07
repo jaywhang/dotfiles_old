@@ -67,6 +67,8 @@ set backspace=indent,eol,start
 
 " Show relative line numbers instead of absolute numbers.
 set relativenumber
+" ... but still show the absolute line number for the current line.
+set number
 
 " Custom word separators.
 set iskeyword-=_
@@ -196,9 +198,9 @@ set expandtab   " Use spaces instead of real tabs
 set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Show matching braces.
 set sm
