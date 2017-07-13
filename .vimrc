@@ -119,8 +119,10 @@ au BufEnter,BufWinEnter,WinEnter,FocusGained,InsertEnter * checktime
 au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 
 " Use system clipboard for copying.  Requires vim version >= 7.3.74
-" For some reason, doesn't work on OS X.
-if !has('mac')
+" For some reason, different setting is required for OS X.
+if has('mac')
+  set clipboard+=unnamed
+elseif !has('mac')
   set clipboard^=unnamedplus
 endif
 
