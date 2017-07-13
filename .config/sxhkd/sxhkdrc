@@ -20,7 +20,7 @@ super + ctrl + BackSpace
 super + q
     bspc node -c
 # Next tiling mode
-super + t
+super + Tab
     bspc desktop -l next
 # Toggle float
 super + f
@@ -94,6 +94,9 @@ super + 1
 # Start chrome in incognito mode
 super + 2
     google-chrome-stable --incognito
+# Start file manager
+super + 3
+    nemo
 {super,alt} + space
     rofi -show run
 
