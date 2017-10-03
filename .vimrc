@@ -28,6 +28,7 @@ Plugin 'lervag/vimtex'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'google/vim-searchindex'
 Plugin 'bkad/CamelCaseMotion'
+Plugin 'airblade/vim-gitgutter'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -37,7 +38,6 @@ else
   " Non-Google only
   Plugin 'google/maktaba'
   Plugin 'google/glaive'
-  Plugin 'airblade/vim-gitgutter'
   Plugin 'scrooloose/syntastic'
 
   " Exclude Raspberry Pi (Rothko).
@@ -67,6 +67,8 @@ set backspace=indent,eol,start
 
 " Show relative line numbers instead of absolute numbers.
 set relativenumber
+" ... but still show the absolute line number for the current line.
+set number
 
 " Custom word separators.
 set iskeyword-=_
@@ -117,8 +119,10 @@ au BufEnter,BufWinEnter,WinEnter,FocusGained,InsertEnter * checktime
 au BufWritePre,FileWritePre,CursorHold,CursorHoldI * checktime
 
 " Use system clipboard for copying.  Requires vim version >= 7.3.74
-" For some reason, doesn't work on OS X.
-if !has('mac')
+" For some reason, different setting is required for OS X.
+if has('mac')
+  set clipboard+=unnamed
+elseif !has('mac')
   set clipboard^=unnamedplus
 endif
 
@@ -196,9 +200,9 @@ set expandtab   " Use spaces instead of real tabs
 set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Show matching braces.
 set sm
@@ -287,6 +291,8 @@ nnoremap te  :tabedit<Space>
 nnoremap tt  :tabedit<CR>
 nnoremap td  :tabclose<CR>
 nnoremap tm  <C-w><S-T>  " Move current buffer to a new tab
+nnoremap tH  :tabm -1<CR>
+nnoremap tL  :tabm +1<CR>
 
 " Make 'goto file' open the target file in new tab by default.
 nnoremap gf <C-w>gf
@@ -321,6 +327,14 @@ set pastetoggle=<F9>
 " Search for visually selected text.
 vnoremap // y/<C-R>"<CR>
 
+" Vertically center cursor when searching.
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
 
 """""""""""""""""""""""""""""""""""""""""
 " CtrlP Settings
@@ -350,11 +364,11 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 
 " Make CtrlP use pymatcher for faster matching.
-if !has('python')
-  echo 'In order to use pymatcher plugin, you need +python compiled vim'
-else
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-endif
+" if !has('python')
+"   echo 'In order to use pymatcher plugin, you need +python compiled vim'
+" else
+"   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" endif
 
 " Use cache for faster lookups.
 let g:ctrlp_use_caching = 1
@@ -367,8 +381,8 @@ let g:ctrlp_match_window = 'results:100'
 """""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """""""""""""""""""""""""""""""""""""""""
-" Because we built YCM for Python 3
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+" Because we built YCM for Python 3.
+" let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Comments and strings are fair game for autocompletion.
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -388,6 +402,7 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_show_diagnostics_ui = 0
 
 " Log more verbosely.
+let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
 
