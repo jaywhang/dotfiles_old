@@ -25,6 +25,7 @@ alias ipy='ipython'
 alias nb='jupyter notebook'
 alias pyserv='python -m http.server 8080'
 alias oc='octave-cli'
+alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
 
 if [[ `uname` == 'Darwin' ]]
 then
