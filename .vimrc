@@ -216,6 +216,9 @@ match ErrorMsg '\s\+$'
 " Better filetype matching.
 let g:tex_flavor = 'latex'
 
+" Honestly not sure what this does, but prevents an error.
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+
 " Autocomplete support with YouCompleteMe.
 if !exists('g:ycm_semantic_triggers')
 	let g:ycm_semantic_triggers = {}
