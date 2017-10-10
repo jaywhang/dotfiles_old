@@ -27,7 +27,7 @@
   ll = log --stat
   lp = log -p
 [user]
-  email = me@jaywhang.com
+  email = jaywhang@stanford.edu
   name = Jay Whang
 # Load work-specific configurations
 [include]

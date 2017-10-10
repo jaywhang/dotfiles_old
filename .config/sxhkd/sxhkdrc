@@ -10,77 +10,6 @@ XF86AudioMute
 # TODO
 
 #
-# bspwm hotkeys
-#
-
-# Quit bspwm
-super + ctrl + BackSpace
-    bspc quit
-# Close window
-super + q
-    bspc node -c
-# Next tiling mode
-super + Tab
-    bspc desktop -l next
-# Toggle float
-super + f
-    bspc node -t \~floating
-# Toggle maximize
-super + m
-    bspc node -t \~fullscreen
-# Move to prev/next window
-super + {j,k}
-    bspc node -f {next,prev}
-# Swap position with prev/next window
-super + shift + {j,k}
-    bspc node -s {next,prev}
-# Move to left/right window
-super + {h,l}
-    bspc node -f {west,east}
-# Swap position with left/right window
-super + shift + {h,l}
-    bspc node -s {west,east}
-# Choose desktop 1-5
-F{1-5}
-    bspc desktop -f ^{1-5}
-# Move the selected window to target desktop
-ctrl + F{1-5}
-    bspc node -d ^{1-5}
-# Move the current window to the target desktop
-super + shift + {1-5}
-    bspc node -d ^{1-5}
-# Move to prev/next desktop
-super + {comma,period}
-    bspc desktop -f {prev,next}
-# Move, with the current window, to prev/next desktop
-super + shift + comma
-    bspc node -d prev && bspc desktop -f prev
-super + shift + period
-    bspc node -d next && bspc desktop -f next
-# Preselect the splitting area of the current window
-super + ctrl + {h,j,k,l}
-    bspc node -p \~{west,south,north,east}
-# Resize the window in given direction
-super + alt + {h,j,k,l}
-    bspc node {@west -r -50,@south -r +50,@north -r -50,@east -r +50}
-# "Balance" the split ratios of the tree of the selected desktop,
-# so all siblings occupy the same area.
-super + e
-    bspc node @focused:/ -B
-# Reset the split ratios of the tree of the selected desktop
-super + b
-    bspc node @focused:/ -E
-# Mouse events
-~button1
-    bspc pointer -g focus
-super + button{1-3}
-    bspc pointer -g {move,resize_side,resize_corner}
-super + !button{1-3}
-    bspc pointer -t %i %i
-super + @button{1-3}
-    bspc pointer -u
-
-#
 # Other miscellaneous hotkeys
 #
 
@@ -104,6 +33,6 @@ super + 3
 super + shift + Escape
     pkill -USR1 -x sxhkd
 
-# Kill X server
+# Kill i3-wm.
 ctrl + alt + BackSpace
-    pkill bspwm
+    pkill i3
