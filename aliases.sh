@@ -26,6 +26,7 @@ alias nb='jupyter notebook'
 alias pyserv='python -m http.server 8080'
 alias oc='octave-cli'
 alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
+alias gd='git rev-parse && cd "$(git rev-parse --show-cdup)"'  # Move to git root directory
 
 if [[ `uname` == 'Darwin' ]]
 then
