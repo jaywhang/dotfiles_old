@@ -220,7 +220,7 @@ match ErrorMsg '\s\+$'
 " Better filetype matching.
 let g:tex_flavor = 'latex'
 
-" Honestly not sure what this does, but prevents an error.
+" Prevents vimtex from complaining about unset servername
 let g:vimtex_compiler_latexmk = {'callback' : 0}
 
 " Autocomplete support with YouCompleteMe.
@@ -265,7 +265,6 @@ if has('mac')
       call system(join(l:cmd + [line('.'), shellescape(l:out), shellescape(l:tex)], ' '))
     endif
   endfunction
-
 elseif has('unix')
   let g:vimtex_view_method = 'general'
   let g:vimtex_view_general_viewer = 'evince'
@@ -274,11 +273,8 @@ endif
 " Auto save for tex files
 autocmd CursorHold,CursorHoldI *.tex update
 
-" Compile options for LaTeX
-let g:vimtex_latexmk_options = '-pdf -shell-escape -synctex=1'
-
 " Clean up auxiliary files upon exiting
-" autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C
+autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C
 
 
 """""""""""""""""""""""""""""""""""""""""
@@ -384,13 +380,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git5_specs
       \ -g ""'
 
-" Make CtrlP use pymatcher for faster matching.
-" if !has('python')
-"   echo 'In order to use pymatcher plugin, you need +python compiled vim'
-" else
-"   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-" endif
-
 " Use cache for faster lookups.
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 1
@@ -402,9 +391,6 @@ let g:ctrlp_match_window = 'results:100'
 """""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe Settings
 """""""""""""""""""""""""""""""""""""""""
-" Because we built YCM for Python 3.
-" let g:ycm_server_python_interpreter = '/usr/bin/python3'
-
 " Comments and strings are fair game for autocompletion.
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_comments_and_strings = 1
@@ -435,10 +421,6 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_python_checkers = ['python']
-" if hostname() == 'warhol'
-"   let g:syntastic_python_checkers = ['pylint']
-"   let g:syntastic_pylint_exec = '~/.conda3/bin/pylint'
-" endif
 
 
 """""""""""""""""""""""""""""""""""""""""
