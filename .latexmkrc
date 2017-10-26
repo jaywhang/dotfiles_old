@@ -24,7 +24,7 @@
 $pdf_mode = 1;
 $bibtex_use = 2;
 $pdflatex = 'pdflatex --synctex=1 --shell-escape %O %S';
-$clean_ext = 'synctex.gz pdfsync out bbl %R.%R.table %R.%R.gnuplot dvi out.pyg';
+$clean_ext = 'synctex.gz pdfsync out bbl %R.%R.table %R.%R.gnuplot dvi out.pyg fls';
 
 # The command to invoke a pdf-previewer.
 # $pdf_update_method = 0

@@ -274,7 +274,7 @@ endif
 autocmd CursorHold,CursorHoldI *.tex update
 
 " Clean up auxiliary files upon exiting
-autocmd VimLeave *.tex :lcd %:p:h | !latexmk -C
+autocmd VimLeave *.tex :lcd %:p:h | !latexmk -c
 
 
 """""""""""""""""""""""""""""""""""""""""
