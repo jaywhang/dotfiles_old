@@ -36,7 +36,7 @@ else
 fi
 
 # Stanford servers
-alias corn='ssh -l jaywhang corn.stanford.edu'
+alias rice='ssh -l jaywhang rice.stanford.edu'  # FarmShare 2
 alias rye01='ssh -l jaywhang rye01.stanford.edu'
 alias rye02='ssh -l jaywhang rye02.stanford.edu'
 
