@@ -41,6 +41,10 @@ alias rye01='ssh -l jaywhang rye01.stanford.edu'
 alias rye02='ssh -l jaywhang rye02.stanford.edu'
 
 # Anaconda environment management.
-alias pyenv='conda create -n '
-alias pyon='source activate '
+alias pyenv='conda create -n'
+alias pyon='source activate'
 alias pyoff='source deactivate'
+
+# Google Compute Engine aliases
+alias gc='gcloud compute'
+alias gci='gcloud compute instances'
