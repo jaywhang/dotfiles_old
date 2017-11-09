@@ -34,14 +34,18 @@ fi
 export EDITOR='vim'
 export VISUAL='vim'
 
+# Set various directory aliases.
+export XDG_CONFIG_HOME="$HOME/.config"
+export DOTFILES="$HOME/.dotfiles"
+
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
 # Load aliases.
-source $HOME/.dotfiles/aliases.sh
+source $DOTFILES/aliases.sh
 
 # Load custom scripts
-export PATH=$HOME/.dotfiles/scripts:$PATH
+export PATH=$DOTFILES/scripts:$PATH
 
 # Load machine-specific settings
 if [ -f $HOME/.$HOST"_config.sh" ]; then

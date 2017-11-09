@@ -1,0 +1,8 @@
+while true; 
+do 
+    clear; 
+    sensors | egrep '^Core|^fan1'; 
+    nvidia-settings -c :0 --query [thermalsensor:0]/thermalsensorreading 2> /dev/null \
+	| grep ^\ *Attribute | sed s/^\ *Attribute.*:/GPU\ Temp:/
+    sleep 2; 
+done

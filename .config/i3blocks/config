@@ -1,0 +1,162 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# i3-gap stuff
+# separator=false
+# separator_block_width=5
+# border_top=4
+# border_left=4
+# border_right=4
+# border_bottom=4
+# full_text=example
+# color=#FFFFFF
+# background=#222222
+# border=#9FBC00
+# border_bottom=0
+
+[bandwidth]
+command=$HOME/.config/i3blocks/scripts/bandwidth -u KB
+interval=persist
+markup=pango
+
+[volume]
+# label=VOL
+label=
+instance=Master
+interval=5
+signal=10
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=RAM
+separator=false
+interval=30
+
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+[disk]
+label=~/
+interval=30
+
+[temperature]
+label=
+interval=10
+
+[rofi-calendar]
+command=$HOME/.config/i3blocks/scripts/rofi-calendar
+label=
+interval=180
+# separator=false
+
+[time]
+command= date '+ %H:%M:%S'
+interval=1
+
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
+
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+
+# [memory]
+# label=
+# separator=false
+# interval=1
+# command=/usr/lib/i3blocks/memory
+# color=#dfe3ee
+#
+# [memory]
+# label=
+# instance=/usr/swap
+# separator=true
+# interval=10
+# color=#7ea1a5
+#
+# [disk]
+# label=
+# #instance=/mnt/data
+# interval=30
+# separator=false
+# color=#d9534f
+#
+# [disk]
+# label=
+# instance=/mnt
+# interval=30
+# separator=true
+# color=#ffff00
+#
+# [cpu_usage]
+# label=
+# command=/usr/lib/i3blocks/cpu_usage
+# interval=1
+# #min_width=CPU:100.00%
+# separator=true
+# color=#00ff7f
+#
+# [temperature]
+# #label=TEMP
+# label=
+# interval=10
+# command=/usr/lib/i3blocks/temperature
+# #color=#8caba8
+# color=#dcedc1
+# separator=true
+#
+# [iface]
+# label=
+# instance=wlp4s0
+# color=#00FFFF
+# interval=10
+# separator=true
+# color=#adff00
+#
+# [bandwidth]
+# label=
+# instance=wlp4s0
+# interval=1
+# color=#83d0c9
+#

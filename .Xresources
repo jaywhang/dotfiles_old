@@ -1,13 +1,13 @@
 !------------------------------------------------
 ! DPI settings
 !------------------------------------------------
-Xft.dpi:            180
+Xft.dpi:            157x161
 Xft.autohint:       0
 Xft.lcdfilter:      lcddefault
 Xft.hintstyle:      hintfull
 Xft.hinting:        1
 Xft.antialias:      1
-Xft.rgba:           bgr
+Xft.rgba:           vrgb
 
 !------------------------------------------------
 ! rxvt-unicode settings
@@ -18,7 +18,7 @@ URxvt.termName: rxvt
 URxvt.scrollBar: false
 URxvt.depth: 32
 URxvt.geometry: 80x28
-URxvt.font: xft:Monaco:size=10, \
+URxvt.font: xft:Monaco:size=11, \
             xft:NanumGothicCoding
 ! Transparency
 URxvt.background:  rgba:0000/0000/0000/eeee
@@ -34,6 +34,7 @@ URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@!-]*[\\w/-]
 !------------------------------------------------
 ! Rofi (launcher, window switcher, etc.) settings
 !------------------------------------------------
+! rofi.font: Dejavu Sans Mono 14
 rofi.font: Dejavu Sans Mono 14
 ! Place the popup in the center of the screen
 rofi.location: 0
@@ -115,8 +116,8 @@ URxvt*color13:      Ansi_13_Color
 URxvt*color14:      Ansi_14_Color
 URxvt*color15:      Ansi_15_Color
 URxvt*colorBD:      Bold_Color
-URxvt*colorIT:      Italic_Color
-URxvt*colorUL:      Underline_Color
+! URxvt*colorIT:      Italic_Color
+! URxvt*colorUL:      Underline_Color
 URxvt*foreground:   Foreground_Color
 URxvt*background:   Background_Color
 URxvt*cursorColor:  Cursor_Color

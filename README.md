@@ -11,32 +11,37 @@
      * ~~obconf~~
      * ~~lxappearance~~
      * ~~lxappearance-obconf~~
-   * bspwm: window manager
-     * bspwm (config: ~/.config/bspwm/bspwmrc)
-     * sxhkd: Simple X HotKey Daemon (config: ~/.config/sxhkd/sxhkdrc)
+   * ~~bspwm: window manager~~
+     * ~~bspwm (config: `~/.config/bspwm/bspwmrc`)~~
+   * sxhkd: Simple X HotKey Daemon (config: `~/.config/sxhkd/sxhkdrc`)
+   * i3-gap: fork of i3, a tiling window manager (`~/.config/i3/config`)
+     * i3blocks
    * compton-git [aur]: composite manager (config: `~/.config/compton.conf`)
    * ~~tint2: taskbar, systray (config: `~/.config/tint2/tint2rc`)~~
-   * stalonetray: systray
+   * ~~stalonetray: systray~~
    * Themes installed:
      * ArchNumix\* themes (custom)
      * AwOken icons 2.5 (aur/awoken-icons): http://alecive.deviantart.com/art/AwOken-163570862
    * ~~Synapse (synapse): application and file launcher~~
-   * rofi: launcher, window manager, etc. (config: ~/.Xresources)
+   * rofi: launcher, window manager, etc. (config: `~/.Xresources`)
  * rxvt-unicode (urxvt): terminal
+ * ~~termite: terminal (config: `~/.config/termite/config`)~~
+ * maim: screenshots
  * IBus: input system for foreign characters
-   * ibus
-   * ibus-hangul: for Korean
-   * ibus-anthy: for Japanese
+   * `ibus`
+   * `ibus-hangul`: for Korean
+   * `ibus-anthy`: for Japanese
  * Fonts installed
-   * Terminus (terminus-font)
-   * Dejavu (ttf-dejavu)
-   * Source Han Sans (adobe-source-han-sans-otc-fonts): set of fonts that covers CJK + more by Adobe
-   * Envy Code R (aur/ttf-envy-code-r)
-   * Ubuntu fonts (ttf-ubuntu-font-family)
-   * Roboto (aur/ttf-roboto)
-   * Naver Nanum fonts (aur/ttf-nanum)
-   * Nanum Gothic Coding font (aur/ttf-nanumgothic_coding)
-   * Monaco (aur/ttf-monaco)
+   * Terminus (`terminus-font`)
+   * Dejavu (`ttf-dejavu`)
+   * Font Awesome (`ttf-font-awesome, awesome-terminal-fonts`)
+   * Source Han Sans (`adobe-source-han-sans-otc-fonts`): set of fonts that covers CJK + more by Adobe
+   * Envy Code R (`aur/ttf-envy-code-r`)
+   * Ubuntu fonts (`ttf-ubuntu-font-family`)
+   * Roboto (`aur/ttf-roboto`)
+   * Naver Nanum fonts (`aur/ttf-nanum`)
+   * Nanum Gothic Coding font (`aur/ttf-nanumgothic_coding`)
+   * Monaco (`aur/ttf-monaco`)
  * CUDA-related packages installed
    * cuda
    * opencl-nvidia

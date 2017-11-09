@@ -25,7 +25,7 @@ super + 2
     google-chrome-stable --incognito
 # Start file manager
 super + 3
-    nemo
+    nemo --name nemo_floating
 {super,alt} + space
     rofi -show run
 
