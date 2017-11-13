@@ -189,10 +189,10 @@ endif
 set foldmethod=syntax
 
 " Create a visible column marker for 80 character limit.
-set colorcolumn=80
+set colorcolumn=81
 " Highlight characters exceeding the 80 character limit in a line.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%>80v.\+/
+match OverLength /\%>81v.\+/
 
 " Indentation (soft tabs, each with 2 spaces).
 set noexpandtab " Make sure that every file uses real tabs, not spaces
@@ -290,9 +290,9 @@ set statusline+=%h      " Help file flag
 set statusline+=%m      " Modified flag
 set statusline+=%r      " Read-only flag
 set statusline+=%y      " Filetype
-" set statusline+=\ \ %#warningmsg#              " Syntastic warning msg
-" set statusline+=%{SyntasticStatuslineFlag()}   " Syntastic warning msg
-" set statusline+=%*                             " Syntastic warning msg
+set statusline+=\ \ %#warningmsg#              " Syntastic warning msg
+set statusline+=%{SyntasticStatuslineFlag()}   " Syntastic warning msg
+set statusline+=%*                             " Syntastic warning msg
 set statusline+=%=      " Left/right separator
 set statusline+=%l,%c   " Line number, cursor column
 set statusline+=\ \ \ \ %p%%  " Percent through file

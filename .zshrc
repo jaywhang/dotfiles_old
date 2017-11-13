@@ -51,3 +51,7 @@ export PATH=$DOTFILES/scripts:$PATH
 if [ -f $HOME/.$HOST"_config.sh" ]; then
   source $HOME/.$HOST"_config.sh"
 fi
+
+# Avoid terminal locking up (especially inside Vim) from Ctrl-S (which can be
+# unlocked with Ctrl-Q).
+stty -ixon
