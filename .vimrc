@@ -29,6 +29,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'google/vim-searchindex'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'archseer/colibri.vim'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -171,8 +172,17 @@ set mousehide
 set t_Co=256
 let g:solarized_termcolors=256
 
+" Needed for better color support inside tmux.
+" More info: https://github.com/lifepillar/vim-solarized8/issues/1
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
+
 " Use dark terminal background.
 set background=dark
+
+"	When on, uses |highlight-guifg| and |highlight-guibg| attributes in the
+"	terminal, thus enabling 24-bit color.
+set termguicolors
 
 " Default colorschemes.
 if has('mac')
