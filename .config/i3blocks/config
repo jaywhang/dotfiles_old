@@ -2,44 +2,14 @@
 #
 # Please see man i3blocks for a complete reference!
 # The man page is also hosted at http://vivien.github.io/i3blocks
-#
-# List of valid properties:
-#
-# align
-# color
-# command
-# full_text
-# instance
-# interval
-# label
-# min_width
-# name
-# separator
-# separator_block_width
-# short_text
-# signal
-# urgent
 
 # Global properties
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=/usr/lib/i3blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=40
 markup=none
-
-# i3-gap stuff
-# separator=false
-# separator_block_width=5
-# border_top=4
-# border_left=4
-# border_right=4
-# border_bottom=4
-# full_text=example
-# color=#FFFFFF
-# background=#222222
-# border=#9FBC00
-# border_bottom=0
 
 [bandwidth]
 command=$HOME/.config/i3blocks/scripts/bandwidth -u KB
@@ -47,7 +17,6 @@ interval=persist
 markup=pango
 
 [volume]
-# label=VOL
 label=
 instance=Master
 interval=5
@@ -57,7 +26,7 @@ signal=10
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=RAM
+label=
 separator=false
 interval=30
 
@@ -81,9 +50,8 @@ interval=180
 # separator=false
 
 [time]
-command= date '+ %H:%M:%S'
+command=echo $(date '+ %H:%M:%S')
 interval=1
-
 
 # Generic media player support
 #

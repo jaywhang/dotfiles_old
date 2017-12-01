@@ -13,6 +13,7 @@ alias cd..='cd ..'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
+alias tmux='tmux -2'  # Force tmux to assume the terminal supports 256 colours.
 alias ta='tmux attach'
 alias tt='tmux attach -t'
 alias tdt='tmux attach -d -t'
@@ -24,7 +25,6 @@ alias wl='wc -l'
 alias ipy='DISPLAY=:0 ipython'
 alias nb='jupyter notebook'
 alias pyserv='python -m http.server 8080'
-alias oc='octave-cli'
 alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
 alias gd='git rev-parse && cd "$(git rev-parse --show-cdup)"'  # Move to git root directory
 
@@ -39,6 +39,7 @@ fi
 alias rice='ssh -l jaywhang rice.stanford.edu'  # FarmShare 2
 alias rye01='ssh -l jaywhang rye01.stanford.edu'
 alias rye02='ssh -l jaywhang rye02.stanford.edu'
+alias corn='ssh -l jaywhang corn.stanford.edu'
 
 # Anaconda environment management.
 alias pyenv='$CONDA_BIN/conda create -n'

@@ -1,4 +1,4 @@
 #curl http://icanhazip.com (sometimes returns ipv6 address)
 #curl http://ipecho.net/plain 2> /dev/null (also works, tested on 2014.04.30)
 #curl http://checkip.dyndns.org 2> /dev/null | sed -e 's/[^[:digit:]|.]//g'  (also works, tested on 2014.04.30)
-curl ifconfig.co
+curl -s ifconfig.co

@@ -1,0 +1,2 @@
+256colors.pl : a perl script that tests your terminal to see if it can correctly display various colors
+

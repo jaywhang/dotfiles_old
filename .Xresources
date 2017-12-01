@@ -21,7 +21,7 @@ URxvt.geometry: 80x28
 URxvt.font: xft:Monaco:size=11, \
             xft:NanumGothicCoding
 ! Transparency
-URxvt.background:  rgba:0000/0000/0000/eeee
+URxvt.background:  rgba:0000/0000/0000/dddd
 URxvt.foreground: #B0B0B0
 ! scrollback buffer lines - 65535 is max (64 is default)
 URxvt.saveLines: 50000

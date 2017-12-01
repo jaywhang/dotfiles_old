@@ -33,6 +33,12 @@ super + 3
 super + shift + Escape
     pkill -USR1 -x sxhkd
 
+shift + alt + l
+    i3lock -i /mnt/data/kiiroitori_resize.png && xset dpms force off
+
+super + 0
+    i3lock -i /mnt/data/kiiroitori_resize.png && xset dpms force off
+
 # Kill i3-wm.
 ctrl + alt + BackSpace
     pkill i3

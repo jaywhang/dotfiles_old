@@ -198,11 +198,14 @@ endif
 " Use syntax-based folding.
 set foldmethod=syntax
 
-" Create a visible column marker for 80 character limit.
-set colorcolumn=81
 " Highlight characters exceeding the 80 character limit in a line.
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%>81v.\+/
+augroup vimrc_autocmds
+  autocmd BufEnter,WinEnter * highlight OverLength ctermbg=darkgray ctermfg=white guibg=#FFD9D9
+  autocmd BufEnter,WinEnter * match OverLength /\%>80v.\+/
+augroup END
+
+" Create a visible column marker for 80 character limit.
+" set colorcolumn=80
 
 " Indentation (soft tabs, each with 2 spaces).
 set noexpandtab " Make sure that every file uses real tabs, not spaces
