@@ -29,7 +29,6 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'google/vim-searchindex'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'archseer/colibri.vim'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
