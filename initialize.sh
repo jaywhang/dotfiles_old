@@ -10,12 +10,6 @@ DOTFILES=$HOME'/.dotfiles'
 # Clone dot files
 git clone https://github.com/jaywhang/dotfiles.git $DOTFILES
 
-# Set up Vim
-ln -s $DOTFILES/.vimrc $HOME/.vimrc
-mkdir -p $HOME/.vim/bundle
-mkdir -p $HOME/.vim/swp
-mkdir -p $HOME/.vim/undo
-
 # Set up tmux
 ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 
@@ -25,3 +19,11 @@ ln -s $DOTFILES/.gitconfig $HOME/.gitconfig
 # TODO: Set up zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 ln -s $DOTFILES/.zshrc $HOME/.zshrc
+
+# Set up Vim
+ln -s $DOTFILES/.vimrc $HOME/.vimrc
+mkdir -p $HOME/.vim/bundle
+mkdir -p $HOME/.vim/swp
+mkdir -p $HOME/.vim/undo
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
