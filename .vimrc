@@ -179,12 +179,11 @@ set t_8b=[48;2;%lu;%lu;%lum
 " Use dark terminal background.
 set background=dark
 
-"	When on, uses |highlight-guifg| and |highlight-guibg| attributes in the
-"	terminal, thus enabling 24-bit color.
-set termguicolors
-
 " Default colorschemes.
 if has('mac')
+  "	When on, uses |highlight-guifg| and |highlight-guibg| attributes in the
+  "	terminal, thus enabling 24-bit color.
+  set termguicolors
   colorscheme seoul256
 elseif has('unix')
   colorscheme darkocean

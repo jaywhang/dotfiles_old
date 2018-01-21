@@ -92,6 +92,8 @@ exec_always ~/.config/i3/scripts/autoname_workspaces.py &
 bindsym --release Print exec --no-startup-id "maim $HOME/dropbox/Screenshots/$(hostname)-screenshot-$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \\"Screenshot saved as $(hostname)-screenshot-$(date +%Y-%m-%d_%H-%M-%S).png\\""
 # Grab selected part of screen and save it to clipboard
 bindsym --release Shift+Print exec --no-startup-id "maim -s -b 12 -c 0.25,0.61,1 | xclip -selection clipboard -t image/png"
+# Grab selected part of screen and save it to file
+bindsym --release Ctrl+Print exec --no-startup-id "maim -s -b 12 -c 0.25,0.61,1 $HOME/dropbox/Screenshots/$(hostname)-screenshot-$(date +%Y-%m-%d_%H-%M-%S).png && notify-send \\"Screenshot saved as $(hostname)-screenshot-$(date +%Y-%m-%d_%H-%M-%S).png\\""
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
