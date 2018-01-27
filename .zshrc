@@ -41,16 +41,16 @@ export DOTFILES="$HOME/.dotfiles"
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
+# Load machine-specific settings (should come before sourcing aliases.sh)
+if [ -f $HOME/.$HOST"_config.sh" ]; then
+  source $HOME/.$HOST"_config.sh"
+fi
+
 # Load aliases.
 source $DOTFILES/aliases.sh
 
 # Load custom scripts
 export PATH=$DOTFILES/scripts:$PATH
-
-# Load machine-specific settings
-if [ -f $HOME/.$HOST"_config.sh" ]; then
-  source $HOME/.$HOST"_config.sh"
-fi
 
 # Avoid terminal locking up (especially inside Vim) from Ctrl-S (which can be
 # unlocked with Ctrl-Q).
