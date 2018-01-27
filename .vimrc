@@ -196,6 +196,9 @@ endif
 " Use syntax-based folding.
 set foldmethod=syntax
 
+" Avoid highlighting keywords within a variable name separated by underscore.
+set iskeyword+=_
+
 " Highlight characters exceeding the 80 character limit in a line.
 augroup vimrc_autocmds
   autocmd BufEnter,WinEnter * highlight OverLength ctermbg=darkgray ctermfg=white guibg=#FFD9D9
