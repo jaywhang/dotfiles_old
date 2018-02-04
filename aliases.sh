@@ -47,9 +47,11 @@ if [[ -z $CONDA_BIN ]]; then
   alias pyon='source activate'
   alias pyoff='source deactivate'
 else
+  alias conda='$CONDA_BIN/conda'
   alias pyenv='$CONDA_BIN/conda create -n'
   alias pyon='source $CONDA_BIN/activate'
   alias pyoff='source $CONDA_BIN/deactivate'
+  alias py36='source $CONDA_BIN/activate py36'
 fi
 
 

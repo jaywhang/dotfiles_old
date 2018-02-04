@@ -46,11 +46,16 @@ if [ -f $HOME/.$HOST"_config.sh" ]; then
   source $HOME/.$HOST"_config.sh"
 fi
 
-# Load aliases.
-source $DOTFILES/aliases.sh
-
 # Load custom scripts
 export PATH=$DOTFILES/scripts:$PATH
+
+# Load machine-specific settings
+if [ -f $HOME/.$HOST"_config.sh" ]; then
+  source $HOME/.$HOST"_config.sh"
+fi
+
+# Load aliases.
+source $DOTFILES/aliases.sh
 
 # Avoid terminal locking up (especially inside Vim) from Ctrl-S (which can be
 # unlocked with Ctrl-Q).
