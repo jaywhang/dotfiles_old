@@ -227,6 +227,9 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Display error for trailing whitespace
 match ErrorMsg '\s\+$'
 
+" Convert 4 space indents to 2 space indents
+nnoremap <leader>si :%s;^\(\s\+\);\=repeat(' ', len(submatch(0))/2);g<CR>:nohlsearch<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""
 " LaTeX Settings
