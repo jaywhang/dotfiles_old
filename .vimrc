@@ -201,7 +201,7 @@ set iskeyword+=_
 
 " Highlight characters exceeding the 80 character limit in a line.
 augroup vimrc_autocmds
-  autocmd BufEnter,WinEnter * highlight OverLength ctermbg=darkgray ctermfg=white guibg=#FFD9D9
+  autocmd BufEnter,WinEnter * highlight OverLength ctermbg=darkgray ctermfg=blue guibg=blue
   autocmd BufEnter,WinEnter * match OverLength /\%>80v.\+/
 augroup END
 
