@@ -419,6 +419,9 @@ let g:ycm_min_num_of_chars_for_completion = 1
 " directory to the project root.
 let g:ycm_filepath_completion_use_working_dir = 1
 
+" Set the path for default YCM conf.
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 " Add programming language keywords to the autocomplete list.
 let g:ycm_seed_identifiers_with_syntax = 1
 
