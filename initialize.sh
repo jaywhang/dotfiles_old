@@ -7,9 +7,6 @@
 #HOME=/home/user_name
 DOTFILES=$HOME'/.dotfiles'
 
-# Clone dot files
-git clone https://github.com/jaywhang/dotfiles.git $DOTFILES
-
 # Set up tmux
 ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
 
