@@ -38,7 +38,7 @@ else
   " Non-Google only
   Plugin 'google/maktaba'
   Plugin 'google/glaive'
-  Plugin 'scrooloose/syntastic'
+  " Plugin 'scrooloose/syntastic'
 
   " Exclude Raspberry Pi (Rothko).
   if hostname != 'rothko'
@@ -209,7 +209,6 @@ augroup END
 " set colorcolumn=80
 
 " Indentation (soft tabs, each with 2 spaces).
-set noexpandtab " Make sure that every file uses real tabs, not spaces
 set expandtab   " Use spaces instead of real tabs
 set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
@@ -307,9 +306,9 @@ set statusline+=%h      " Help file flag
 set statusline+=%m      " Modified flag
 set statusline+=%r      " Read-only flag
 set statusline+=%y      " Filetype
-set statusline+=\ \ %#warningmsg#              " Syntastic warning msg
-set statusline+=%{SyntasticStatuslineFlag()}   " Syntastic warning msg
-set statusline+=%*                             " Syntastic warning msg
+" set statusline+=\ \ %#warningmsg#              " Syntastic warning msg
+" set statusline+=%{SyntasticStatuslineFlag()}   " Syntastic warning msg
+" set statusline+=%*                             " Syntastic warning msg
 set statusline+=%=      " Left/right separator
 set statusline+=%l,%c   " Line number, cursor column
 set statusline+=\ \ \ \ %p%%  " Percent through file
@@ -436,11 +435,11 @@ let g:ycm_server_log_level = 'debug'
 """""""""""""""""""""""""""""""""""""""""
 " Syntastic Settings
 """""""""""""""""""""""""""""""""""""""""
-let g:syntastic_check_on_open = 1
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_python_checkers = ['python']
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_error_symbol = '✗'
+" let g:syntastic_warning_symbol = '⚠'
+" let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+" let g:syntastic_python_checkers = ['python']
 
 
 """""""""""""""""""""""""""""""""""""""""

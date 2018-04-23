@@ -30,6 +30,7 @@ alias nb='jupyter notebook'
 alias pyserv='python -m http.server 8080'
 alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
 alias gd='git rev-parse && cd "$(git rev-parse --show-cdup)"'  # Move to git root directory
+alias tf='tail -f'
 
 if [[ `uname` == 'Darwin' ]]
 then
@@ -50,7 +51,7 @@ if [[ -z $CONDA_BIN ]]; then
   alias pyon='source activate'
   alias pyoff='source deactivate'
 else
-  alias conda='$CONDA_BIN/conda'
+  alias pyconda='$CONDA_BIN/conda'
   alias pyenv='$CONDA_BIN/conda create -n'
   alias pyon='source $CONDA_BIN/activate'
   alias pyoff='source $CONDA_BIN/deactivate'

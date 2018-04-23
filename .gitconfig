@@ -18,6 +18,7 @@
   br = branch
   ci = commit
   st = status
+  stt = status -uno
   ru = remote update
   sm = submodule
   df = diff --name-status
