@@ -17,7 +17,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$HOME/.dotfiles/zsh
 
 # List of oh-my-zsh plugins to load.
-plugins=(git history-substring-search git-flow-completion)
+plugins=(git history-substring-search git-flow-completion docker kubectl)
 
 # mkdir a directory and cd into it.
 function mkcd {
