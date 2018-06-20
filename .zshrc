@@ -60,3 +60,5 @@ source $DOTFILES/aliases.sh
 # Avoid terminal locking up (especially inside Vim) from Ctrl-S (which can be
 # unlocked with Ctrl-Q).
 stty -ixon
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -17,8 +17,8 @@ call vundle#rc()
 Plugin 'gmarik/Vundle.vim'
 
 " List of Bundles
-Plugin 'kien/ctrlp.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tComment'
 Plugin 'Raimondi/delimitMate'
@@ -29,6 +29,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'google/vim-searchindex'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/fzf.vim'
 
 " Work-related stuff
 if filereadable(expand('~/.at_google.vim'))
@@ -333,11 +334,6 @@ nnoremap gf <C-w>gf
 " Sort current paragraph block (sb for 'Sort Block').
 nnoremap sb vip:sort<CR>
 
-" Run CtrlP in CWD.
-nnoremap <Leader>p :CtrlPCurWD<CR>
-" Clear CtrlP cache.
-nnoremap <Leader>cc :CtrlPClearAllCaches<CR>
-
 " Temporarily switching off search highlight.
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
@@ -372,6 +368,11 @@ nnoremap g# g#zz
 """""""""""""""""""""""""""""""""""""""""
 " CtrlP Settings
 """""""""""""""""""""""""""""""""""""""""
+" " Run CtrlP in CWD.
+" nnoremap <Leader>p :CtrlPCurWD<CR>
+" " Clear CtrlP cache.
+" nnoremap <Leader>cc :CtrlPClearAllCaches<CR>
+
 " Use CtrlPMixed mode by default.
 let g:ctrlp_cmd = 'CtrlPMixed'
 
@@ -465,6 +466,15 @@ let g:gitgutter_sign_modified_removed = 'ww'
 " sunmap b
 " sunmap e
 " sunmap ge
+
+
+"""""""""""""""""""""""""""""""""""""""""
+" fzf Settings
+"""""""""""""""""""""""""""""""""""""""""
+set rtp+=~/.fzf
+noremap <C-p> :GFiles<cr>
+noremap <Leader>p :Files<cr>
+
 
 """""""""""""""""""""""""""""""""""""""""
 " ....Are we done?
