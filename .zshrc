@@ -46,8 +46,16 @@ if [ -f $HOME/.$HOST"_config.sh" ]; then
   source $HOME/.$HOST"_config.sh"
 fi
 
-# Load custom scripts
+# Load custom scripts.
 export PATH=$DOTFILES/scripts:$PATH
+export PATH=~/.diff-so-fancy/:$PATH  # Improved diff tool
+
+# Default FZF config.
+export FZF_DEFAULT_OPTS='--layout=reverse --border --no-height'
+# export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_CTRL_T_OPTS="--preview '[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
 # Load machine-specific settings
 if [ -f $HOME/.$HOST"_config.sh" ]; then

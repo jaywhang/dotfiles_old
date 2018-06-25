@@ -474,7 +474,12 @@ let g:gitgutter_sign_modified_removed = 'ww'
 set rtp+=~/.fzf
 noremap <C-p> :GFiles<cr>
 noremap <Leader>p :Files<cr>
+command! Fzfc call fzf#run(fzf#wrap(
+  \ {'source': 'git ls-files --exclude-standard --others --modified'}))
 
+command! -bang -nargs=* Find call fzf#vim#grep(
+  \'rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+noremap <C-f> :Find<space>
 
 """""""""""""""""""""""""""""""""""""""""
 " ....Are we done?

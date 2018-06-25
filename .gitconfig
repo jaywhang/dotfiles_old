@@ -1,6 +1,7 @@
 [core]
   editor = vim
   autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [merge]
   tool = meld
   defaultToUpstream = true
@@ -27,7 +28,7 @@
   l = log --pretty=format:'%C(yellow)%h%C(white) %an <%ae> %>|(80)%ai%Creset%n%C(bold)%w(0,4,4)%s%C(reset)%n%+b'
   ll = log --stat
   lp = log -p
-	reset-permission = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+  reset-permission = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [user]
   email = jaywhang@stanford.edu
   name = Jay Whang
