@@ -471,7 +471,13 @@ let g:gitgutter_sign_modified_removed = 'ww'
 """""""""""""""""""""""""""""""""""""""""
 " fzf Settings
 """""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.fzf
+if has('mac')
+  " Installed with Homebrew
+  set rtp+=/usr/local/opt/fzf
+elseif !has('mac')
+  " On Linux
+  set rtp+=~/.fzf
+endif
 noremap <C-p> :GFiles<cr>
 noremap <Leader>p :Files<cr>
 command! Fzfc call fzf#run(fzf#wrap(

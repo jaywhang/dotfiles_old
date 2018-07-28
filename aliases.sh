@@ -41,7 +41,7 @@ fi
 
 # Stanford servers
 alias rice='ssh -l jaywhang rice.stanford.edu'  # FarmShare 2
-alias sc='ssh -l jaywhang sc.stanford.edu'
+alias sc='ssh -l jaywhang sc.stanford.edu -i ~/.ssh/sc_rsa'
 alias rye01='ssh -l jaywhang rye01.stanford.edu'
 alias rye02='ssh -l jaywhang rye02.stanford.edu'
 alias corn='ssh -l jaywhang corn.stanford.edu'
