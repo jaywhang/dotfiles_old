@@ -201,10 +201,10 @@ set foldmethod=syntax
 set iskeyword+=_
 
 " Highlight characters exceeding the 80 character limit in a line.
-augroup vimrc_autocmds
-  autocmd BufEnter,WinEnter * highlight OverLength ctermfg=white ctermbg=red guibg=#ff4444
-  autocmd BufEnter,WinEnter * match OverLength /\%>80v.\+/
-augroup END
+" augroup vimrc_autocmds
+"   autocmd BufEnter,WinEnter * highlight OverLength ctermfg=white ctermbg=red guibg=#ff4444
+"   autocmd BufEnter,WinEnter * match OverLength /\%>80v.\+/
+" augroup END
 
 " Create a visible column marker for 80 character limit.
 " set colorcolumn=80
@@ -214,9 +214,9 @@ set expandtab   " Use spaces instead of real tabs
 set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 " Show matching braces.
 set sm
@@ -227,7 +227,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Display error for trailing whitespace
 match ErrorMsg '\s\+$'
 
-" Convert 4 space indents to 2 space indents
+" Halve indents (e.g. 4 to 2)
 nnoremap <leader>si :%s;^\(\s\+\);\=repeat(' ', len(submatch(0))/2);g<CR>:nohlsearch<CR>
 
 
@@ -364,6 +364,8 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+command IpdbBreak :normal Oimport ipdb; ipdb.set_trace()
+nnoremap <Leader>b :IpdbBreak<CR>
 
 """""""""""""""""""""""""""""""""""""""""
 " CtrlP Settings

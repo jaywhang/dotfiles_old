@@ -49,6 +49,7 @@ fi
 # Load custom scripts.
 export PATH=$DOTFILES/scripts:$PATH
 export PATH=~/.diff-so-fancy/:$PATH  # Improved diff tool
+export PATH=$HOME/.bin:$PATH
 
 # Default FZF config.
 export FZF_DEFAULT_OPTS='--layout=reverse --border --no-height'
@@ -71,3 +72,6 @@ stty -ixon
 
 # Load fzf key bindings for zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# For rbenv
+eval "$(rbenv init -)"

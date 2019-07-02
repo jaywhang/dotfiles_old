@@ -45,6 +45,10 @@ alias sc='ssh -l jaywhang sc.stanford.edu -i ~/.ssh/sc_rsa'
 alias rye01='ssh -l jaywhang rye01.stanford.edu'
 alias rye02='ssh -l jaywhang rye02.stanford.edu'
 alias corn='ssh -l jaywhang corn.stanford.edu'
+alias atlas1='ssh -l jaywhang atlas1.stanford.edu -i ~/.ssh/sc_rsa'
+
+# AWS VM
+alias aws='mosh --ssh="ssh -l ubuntu -i ~/dropbox/stanford/aws.pem"'
 
 # Anaconda environment management.
 if [[ -z $CONDA_BIN ]]; then
