@@ -70,8 +70,9 @@ source $DOTFILES/aliases.sh
 # unlocked with Ctrl-Q).
 stty -ixon
 
-# Load fzf key bindings for zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # For rbenv
 eval "$(rbenv init -)"
+
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+fi

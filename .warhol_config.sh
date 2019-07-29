@@ -1,6 +1,6 @@
 # CUDA-related exports
 # Currently uses CUDA 8.0 and cuDNN 6.0 for TensorFlow.
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/cuda/lib64:/opt/cuda/extras/CUPTI/lib64"
+export LD_LIBRARY_PATH="/usr/local/lib64:/usr/local/lib:$LD_LIBRARY_PATH"
 export CUDA_HOME=/opt/cuda
 
 # Adjust scaling of GTK/QT apps for 4K screen
@@ -22,6 +22,10 @@ export BROWSER='google-chrome-stable'
 
 alias open='xdg-open'
 
+# Load fzf bindings for zsh
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+
 # Conda binary path.
 export CONDA_BIN=/home/bluejay/.anaconda3/bin
 
@@ -30,3 +34,7 @@ if [ -f '/home/bluejay/.google-cloud-sdk/path.zsh.inc' ]; then source '/home/blu
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/bluejay/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/bluejay/.google-cloud-sdk/completion.zsh.inc'; fi
+
+# Mujoco paths
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/bluejay/.mujoco/mjpro150/bin
+export LD_PRELOAD=/usr/lib/libGLEW.so:/usr/lib/libGL.so
