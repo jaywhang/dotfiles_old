@@ -17,7 +17,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$HOME/.dotfiles/zsh
 
 # List of oh-my-zsh plugins to load.
-plugins=(git history-substring-search git-flow-completion docker kubectl)
+plugins=(git history-substring-search)
 
 # mkdir a directory and cd into it.
 function mkcd {
@@ -69,9 +69,6 @@ source $DOTFILES/aliases.sh
 # Avoid terminal locking up (especially inside Vim) from Ctrl-S (which can be
 # unlocked with Ctrl-Q).
 stty -ixon
-
-# For rbenv
-eval "$(rbenv init -)"
 
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
