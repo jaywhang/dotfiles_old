@@ -39,14 +39,15 @@ else
   alias ls='ls -x --color=always'
 fi
 
-# Stanford servers
+# School servers
 alias rice='ssh -l jaywhang rice.stanford.edu'  # FarmShare 2
 alias sc='ssh -l jaywhang sc.stanford.edu -i ~/.ssh/sc_rsa'
-alias rye01='ssh -l jaywhang rye01.stanford.edu'
-alias rye02='ssh -l jaywhang rye02.stanford.edu'
-alias corn='ssh -l jaywhang corn.stanford.edu'
-alias aws='mosh --ssh="ssh -l ubuntu -i ~/dropbox/stanford/aws.pem"'
+alias aws='mosh --ssh="ssh -l ubuntu -i ~/Dropbox/archive/aws.pem"'
 alias suvpn='sudo openconnect --authgroup="Full Traffic non-split-tunnel" --user=jaywhang su-vpn.stanford.edu'
+alias sirius='mosh --ssh="ssh -i ~/.ssh/sshkey_hockney -l jay" -p 8099 sirius.ece.utexas.edu'
+alias sirius-ssh='ssh -i ~/.ssh/sshkey_hockney -l jay sirius.ece.utexas.edu'  # 10.157.90.229
+alias sirius-admin='ssh -l jay-admin sirius.ece.utexas.edu'
+alias aries='ssh -i ~/.ssh/sshkey_hockney jay@aries.ece.utexas.edu'
 
 # Anaconda environment management.
 if [[ -z $CONDA_BIN ]]; then

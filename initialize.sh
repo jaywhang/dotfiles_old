@@ -17,6 +17,9 @@ ln -s $DOTFILES/.gitconfig $HOME/.gitconfig
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 ln -s $DOTFILES/.zshrc $HOME/.zshrc
 
+# Set up ripgrep
+ln -s $DOTFILES/.ripgreprc $HOME/.ripgreprc
+
 # Set up Vim
 ln -s $DOTFILES/.vimrc $HOME/.vimrc
 mkdir -p $HOME/.vim/bundle
