@@ -27,7 +27,7 @@ alias csvawk='awk -F "," -v OFS=","'
 alias wl='wc -l'
 alias ipy='DISPLAY=:0 ipython'
 alias nb='jupyter notebook'
-alias pyserv='python -m http.server 8080'
+alias pyserv='python3 -m http.server 8080'
 alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
 alias gd='git rev-parse && cd "$(git rev-parse --show-cdup)"'  # Move to git root directory
 alias tf='tail -f'
@@ -53,15 +53,17 @@ alias aries='ssh -i ~/.ssh/sshkey_hockney jay@aries.ece.utexas.edu'
 if [[ -z $CONDA_BIN ]]; then
   alias pyenv='conda create -n'
   alias pyon='source activate'
-  alias pyoff='source deactivate'
+  alias pyoff='conda deactivate'
 else
   alias pyconda='$CONDA_BIN/conda'
   alias pyenv='$CONDA_BIN/conda create -n'
   alias pyon='source $CONDA_BIN/activate'
-  alias pyoff='source $CONDA_BIN/deactivate'
+  alias pyoff='$CONDA_BIN/conda deactivate'
   alias py36='source $CONDA_BIN/activate py36'
 fi
 
+# Tensorboard
+alias tb='tensorboard --port 8090 --logdir'
 
 # Google Compute Engine aliases
 alias gc='gcloud compute'

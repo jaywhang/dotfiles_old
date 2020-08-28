@@ -1,8 +1,13 @@
-while true; 
-do 
-    clear; 
-    sensors | egrep '^Core|^fan1'; 
-    nvidia-settings -c :0 --query [thermalsensor:0]/thermalsensorreading 2> /dev/null \
-	| grep ^\ *Attribute | sed s/^\ *Attribute.*:/GPU\ Temp:/
-    sleep 2; 
+while true;
+do
+    clear;
+    echo ">>>>>>>>>>>>>>> CPU Info <<<<<<<<<<<<<<<"
+    sensors | egrep '^Core|^fan1';
+
+    echo""
+    echo ">>>>>>>>>>>>>>> GPU Info <<<<<<<<<<<<<<<"
+    nvidia-smi --query-gpu="temperature.gpu,utilization.gpu" --format=csv,noheader,nounits  | awk '{print NR-1  " :           " $s}' | sed 's/^/GPU\ /' | sed 's/,\ /°C\ \ (utilization:\ /' | sed 's/$/\ %)/';
+
+    echo""
+    sleep 2;
 done

@@ -185,9 +185,9 @@ if has('mac')
   "	When on, uses |highlight-guifg| and |highlight-guibg| attributes in the
   "	terminal, thus enabling 24-bit color.
   set termguicolors
-  colorscheme seoul256
+  colorscheme seoul256-light
 elseif has('unix')
-  colorscheme darkocean
+  colorscheme seoul256-light
 endif
 
 
