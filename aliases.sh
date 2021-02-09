@@ -44,10 +44,14 @@ alias rice='ssh -l jaywhang rice.stanford.edu'  # FarmShare 2
 alias sc='ssh -l jaywhang sc.stanford.edu -i ~/.ssh/sc_rsa'
 alias aws='mosh --ssh="ssh -l ubuntu -i ~/Dropbox/archive/aws.pem"'
 alias suvpn='sudo openconnect --authgroup="Full Traffic non-split-tunnel" --user=jaywhang su-vpn.stanford.edu'
-alias sirius='mosh --ssh="ssh -i ~/.ssh/sshkey_hockney -l jay" -p 8099 sirius.ece.utexas.edu'
+alias sirius='mosh --ssh="ssh -i ~/.ssh/sshkey_hockney -l jay" -p 8090:8099 sirius.ece.utexas.edu'
 alias sirius-ssh='ssh -i ~/.ssh/sshkey_hockney -l jay sirius.ece.utexas.edu'  # 10.157.90.229
 alias sirius-admin='ssh -l jay-admin sirius.ece.utexas.edu'
 alias aries='ssh -i ~/.ssh/sshkey_hockney jay@aries.ece.utexas.edu'
+
+# TACC servers
+alias maverick='ssh -i ~/.ssh/sshkey_hockney jaywhang@maverick2.tacc.utexas.edu'
+alias longhorn='ssh -i ~/.ssh/sshkey_hockney jaywhang@login1.longhorn.tacc.utexas.edu'
 
 # Anaconda environment management.
 if [[ -z $CONDA_BIN ]]; then

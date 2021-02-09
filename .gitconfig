@@ -2,6 +2,9 @@
   editor = vim
   autocrlf = input
   pager = diff-so-fancy | less --tabs=4 -RFX
+[user]
+  email = jaywhang@cs.utexas.edu
+  name = Jay Whang
 [merge]
   tool = meld
   defaultToUpstream = true
@@ -14,6 +17,8 @@
   postBuffer = 52428800
 [push]
   default = simple
+[pull]
+  ff = only
 [alias]
   co = checkout
   br = branch
@@ -29,9 +34,6 @@
   ll = log --stat
   lp = log -p
   reset-permission = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
-[user]
-  email = jaywhang@cs.utexas.edu
-  name = Jay Whang
 # Load work-specific configurations
 [include]
   path = ~/.at_google.git
