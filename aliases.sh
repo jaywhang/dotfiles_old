@@ -25,9 +25,6 @@ alias tns='tmux new -s'
 alias mmmm='Rscript -e "data = as.numeric (readLines (\"stdin\")); summary(data); s = sum(data); sd = sd(data); cat(\"sum: \",s,\"\\n\"); cat(\"stddev: \",sd,\"\\n\");"'
 alias csvawk='awk -F "," -v OFS=","'
 alias wl='wc -l'
-alias ipy='DISPLAY=:0 ipython'
-alias nb='jupyter notebook'
-alias pyserv='python3 -m http.server 8080'
 alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
 alias gd='git rev-parse && cd "$(git rev-parse --show-cdup)"'  # Move to git root directory
 alias tf='tail -f'
@@ -53,9 +50,12 @@ alias aries='ssh -i ~/.ssh/sshkey_hockney jay@aries.ece.utexas.edu'
 alias maverick='ssh -i ~/.ssh/sshkey_hockney jaywhang@maverick2.tacc.utexas.edu'
 alias longhorn='ssh -i ~/.ssh/sshkey_hockney jaywhang@login1.longhorn.tacc.utexas.edu'
 
-# Anaconda environment management.
+# Python-related
 alias pyon='conda activate'
 alias pyoff='conda deactivate'
+alias ipy='DISPLAY=:0 ipython'
+alias nb='jupyter notebook'
+alias pyserv='python3 -m http.server 8080'
 
 # Tensorboard
 alias tb='tensorboard --port 8090 --bind_all --logdir'
