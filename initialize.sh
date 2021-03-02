@@ -32,3 +32,6 @@ mkdir -p $HOME/.vim/swp
 mkdir -p $HOME/.vim/undo
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+# Set up conda
+ln -s $DOTFILES/.condarc $HOME/.condarc
