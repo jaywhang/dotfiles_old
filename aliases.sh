@@ -54,20 +54,11 @@ alias maverick='ssh -i ~/.ssh/sshkey_hockney jaywhang@maverick2.tacc.utexas.edu'
 alias longhorn='ssh -i ~/.ssh/sshkey_hockney jaywhang@login1.longhorn.tacc.utexas.edu'
 
 # Anaconda environment management.
-if [[ -z $CONDA_BIN ]]; then
-  alias pyenv='conda create -n'
-  alias pyon='source activate'
-  alias pyoff='conda deactivate'
-else
-  alias pyconda='$CONDA_BIN/conda'
-  alias pyenv='$CONDA_BIN/conda create -n'
-  alias pyon='source $CONDA_BIN/activate'
-  alias pyoff='$CONDA_BIN/conda deactivate'
-  alias py36='source $CONDA_BIN/activate py36'
-fi
+alias pyon='conda activate'
+alias pyoff='conda deactivate'
 
 # Tensorboard
-alias tb='tensorboard --port 8090 --logdir'
+alias tb='tensorboard --port 8090 --bind_all --logdir'
 
 # Google Compute Engine aliases
 alias gc='gcloud compute'
