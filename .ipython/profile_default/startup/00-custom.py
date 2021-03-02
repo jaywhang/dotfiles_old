@@ -24,6 +24,6 @@ except ModuleNotFoundError:
 try:
     import jax
     import jax.numpy as jnp
-    from jax import grad, vmap
+    from jax import grad, jit, vmap
 except ModuleNotFoundError:
     pass
