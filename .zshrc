@@ -48,7 +48,6 @@ fi
 
 # Load custom scripts.
 export PATH=$DOTFILES/scripts:$PATH
-export PATH=~/.diff-so-fancy/:$PATH  # Improved diff tool
 export PATH=$HOME/.bin:$PATH
 
 # Default FZF config.
