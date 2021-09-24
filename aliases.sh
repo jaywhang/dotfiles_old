@@ -28,6 +28,7 @@ alias wl='wc -l'
 alias lc='latexmk -c'  # Remove junk from LaTeX compilation.
 alias gd='git rev-parse && cd "$(git rev-parse --show-cdup)"'  # Move to git root directory
 alias tf='tail -f'
+alias gdiff='git diff --no-index'
 
 if [[ `uname` == 'Darwin' ]]
 then
