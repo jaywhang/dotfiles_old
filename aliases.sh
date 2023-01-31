@@ -50,6 +50,7 @@ alias aries='ssh -i ~/.ssh/sshkey_hockney jay@aries.ece.utexas.edu'
 # TACC servers
 alias maverick='ssh -i ~/.ssh/sshkey_hockney jaywhang@maverick2.tacc.utexas.edu'
 alias longhorn='ssh -i ~/.ssh/sshkey_hockney jaywhang@login1.longhorn.tacc.utexas.edu'
+alias frontera='ssh -i ~/.ssh/sshkey_hockney jaywhang@frontera.tacc.utexas.edu'
 
 # Python-related
 alias pyon='conda activate'
